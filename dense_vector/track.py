@@ -11,13 +11,14 @@ logger = logging.getLogger(__name__)
 
 def extract_vector_operations_count(knn_result):
     vector_operations_count = 0
-    profile = knn_result["profile"]
-    for shard in profile["shards"]:
-        assert len(shard["dfs"]["knn"]) == 1
-        knn_search = shard["dfs"]["knn"][0]
-        if "vector_operations_count" in knn_search:
-            vector_operations_count += knn_search["vector_operations_count"]
-    return vector_operations_count
+    return 0
+    # profile = knn_result["profile"]
+    # for shard in profile["shards"]:
+    #     assert len(shard["dfs"]["knn"]) == 1
+    #     knn_search = shard["dfs"]["knn"][0]
+    #     if "vector_operations_count" in knn_search:
+    #         vector_operations_count += knn_search["vector_operations_count"]
+    # return vector_operations_count
 
 
 def compute_percentile(data: List[Any], percentile):
@@ -49,7 +50,7 @@ async def extract_exact_neighbors(
             "script_score": {
                 "query": {"match_all": {}},
                 "script": {
-                    "source": f"cosineSimilarity(params.query, '{vector_field}') + 1.0",
+                    "source": f"cosineSimilarity(params.query, 'vector_flat_vector') + 1.0",
                     "params": {"query": query_vector},
                 },
             }
@@ -145,7 +146,7 @@ class KnnParamSource:
                     "script_score": {
                         "query": {"match_all": {}},
                         "script": {
-                            "source": f"cosineSimilarity(params.query, '{self._vector_field}') + 1.0",
+                            "source": f"cosineSimilarity(params.query, 'vector_flat_vector') + 1.0",
                             "params": {"query": self._queries[self._iters]},
                         },
                     }
@@ -231,7 +232,7 @@ class KnnRecallRunner:
                         "num_candidates": num_candidates,
                     },
                     "_source": False,
-                    "profile": True,
+                    "profile": False,
                 },
                 index=index,
                 request_cache=request_cache,

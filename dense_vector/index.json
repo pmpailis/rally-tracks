@@ -17,13 +17,20 @@
         "type": "dense_vector",
         "dims" : 96,
         "index" : true,
-        "similarity": "dot_product",
         "index_options": {
           "type": {{ vector_index_type | default("hnsw") | tojson }},
           "m": 32,
           "ef_construction": 100
         }
-      }
+      },
+      "vector_centroids": {
+        "type": "keyword"
+      },
+      "vector_flat_vector": {
+        "type": "dense_vector",
+        "dims": 96,
+        "element_type": "float",
+        "index": false
     }
   }
 }
