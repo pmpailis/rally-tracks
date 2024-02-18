@@ -28,7 +28,7 @@
       "operation": {
         "operation-type": "bulk",
         "bulk-size": {{bulk_size | default(5000)}},
-        "ingest-percentage": 20
+        "ingest-percentage": 100
       },
       "warmup-time-period": {{ bulk_warmup | default(40) | int }},
       "clients": {{bulk_indexing_clients | default(1)}}
