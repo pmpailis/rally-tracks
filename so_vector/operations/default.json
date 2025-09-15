@@ -65,7 +65,7 @@
       "field": "acceptedAnswerId"
     }
   }
-}
+},
 {
   "name": "script-score-query-java",
   "operation-type": "search",
