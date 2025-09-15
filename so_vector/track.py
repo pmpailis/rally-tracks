@@ -19,7 +19,7 @@ async def extract_exact_neighbors(query_vector: List[float], index: str, max_siz
             "script_score": {
                 "query": filter,
                 "script": {
-                    "source": f"dotProduct(params.query, '{vector_field}') + 1.0",
+                    "source": f"cosineSimilarity(params.query, '{vector_field}') + 1.0",
                     "params": {"query": query_vector},
                 },
             }
