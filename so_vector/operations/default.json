@@ -79,7 +79,7 @@
       ]
     }
   }
-}
+},
 {
   "name": "script-score-query-match-all",
   "operation-type": "search",
