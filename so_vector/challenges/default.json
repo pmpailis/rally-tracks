@@ -23,11 +23,15 @@
       }
     },
     {
+      "operation": "dup-vec-pipeline-op"
+    },
+    {
       "name": "index-append",
       "operation": {
         "operation-type": "bulk",
         "bulk-size": {{bulk_size | default(500)}},
-        "ingest-percentage": {{ingest_percentage | default(100)}}
+        "ingest-percentage": {{ingest_percentage | default(100)}},
+        "pipeline": "dup_vec"
       },
       "warmup-time-period": {{ bulk_warmup | default(40) | int }},
       "clients": {{bulk_indexing_clients | default(1)}}

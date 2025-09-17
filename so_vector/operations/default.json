@@ -1,4 +1,19 @@
 {
+  "name": "dup-vec-pipeline-op",
+  "operation-type": "raw-request",
+  "method": "PUT",
+  "path": "/_ingest/pipeline/dup_vec",
+  "body": {
+    "processors": [
+      {
+        "script": {
+          "source": "if (ctx.titleVector != null) { def noisy = new ArrayList(); for (v in ctx.titleVector) { noisy.add(v + (Math.random() - 0.5) * 0.01); } ctx.titleVectorRandom = noisy; }"
+        }
+      }
+    ]
+  }
+},
+{
   "name": "script-score-query-css",
   "operation-type": "search",
   "param-source": "knn-param-source",
