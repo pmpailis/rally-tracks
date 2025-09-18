@@ -29,7 +29,7 @@
       "name": "index-append",
       "operation": {
         "operation-type": "bulk",
-        "bulk-size": {{bulk_size | default(500)}},
+        "bulk-size": {{bulk_size | default(100)}},
         "ingest-percentage": {{ingest_percentage | default(100)}},
         "pipeline": "dup_vec"
       },
