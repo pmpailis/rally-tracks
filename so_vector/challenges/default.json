@@ -40,7 +40,7 @@
       "name": "refresh-after-index",
       "operation": {
         "operation-type": "refresh",
-        "request-timeout": 1000,
+        "request-timeout": 100000,
         "include-in-reporting": true
       }
     },
