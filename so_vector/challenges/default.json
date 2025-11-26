@@ -63,78 +63,6 @@
       "tags": ["index"]
     },
     {
-      "name": "knn-search-default-match-all",
-      "tags": ["search"],
-      "operation": "knn-search-default-match-all",
-      "warmup-iterations": {{ warmup_iterations | default(100) }},
-      "iterations": {{ iterations | default(100) }},
-      "clients": 1
-    },
-    {
-      "name": "knn-search-default-match-all-multi-client",
-      "tags": ["search"],
-      "operation": "knn-search-default-match-all",
-      "warmup-iterations": {{ warmup_iterations | default(100) }},
-      "iterations": {{ iterations | default(100) }},
-      "clients": {{ search_clients | default(8) | int }}
-    },
-    {
-      "name": "knn-recall-default-match-all",
-      "tags": ["search"],
-      "operation": "knn-recall-default-match-all",
-      "warmup-iterations": 0,
-      "iterations": 1,
-      "clients": 1
-    },
-    {
-      "name": "knn-search-10-50-match-all",
-      "tags": ["search"],
-      "operation": "knn-search-10-50-match-all",
-      "warmup-iterations": {{ warmup_iterations | default(100) }},
-      "iterations": {{ iterations | default(100) }},
-      "clients": 1
-    },
-    {
-      "name": "knn-recall-10-50-match-all",
-      "tags": ["search"],
-      "operation": "knn-recall-10-50-match-all",
-      "warmup-iterations": 0,
-      "iterations": 1,
-      "clients": 1
-    },
-    {
-      "name": "knn-search-100-300-match-all",
-      "tags": ["search"],
-      "operation": "knn-search-100-300-match-all",
-      "warmup-iterations": {{ warmup_iterations | default(100) }},
-      "iterations": {{ iterations | default(100) }},
-      "clients": 1
-    },
-    {
-      "name": "knn-search-100-300-match-all-multi-client",
-      "tags": ["search"],
-      "operation": "knn-search-100-300-match-all",
-      "warmup-iterations": {{ warmup_iterations | default(100) }},
-      "iterations": {{ iterations | default(100) }},
-      "clients": {{ search_clients | default(8) | int }}
-    },
-    {
-      "name": "knn-recall-100-300-match-all",
-      "tags": ["search"],
-      "operation": "knn-recall-100-300-match-all",
-      "warmup-iterations": 0,
-      "iterations": 1,
-      "clients": 1
-    },
-    {
-      "name": "script-score-query-match-all",
-      "tags": ["search"],
-      "operation": "script-score-query-match-all",
-      "warmup-iterations": {{ warmup_iterations | default(100) }},
-      "iterations": {{ exact_search_iterations | default(100) }},
-      "clients": 1
-    },
-    {
       "name": "knn-search-10-50-acceptedAnswerId",
       "tags": ["search"],
       "operation": "knn-search-10-50-acceptedAnswerId",
@@ -175,22 +103,6 @@
       "clients": 1
     },
     {
-      "name": "script-score-query-java",
-      "tags": ["search"],
-      "operation": "script-score-query-java",
-      "warmup-iterations": {{ warmup_iterations | default(100) }},
-      "iterations": {{ exact_search_iterations | default(100) }},
-      "clients": 1
-    },
-    {
-      "name": "script-score-query-javascript",
-      "tags": ["search"],
-      "operation": "script-score-query-javascript",
-      "warmup-iterations": {{ warmup_iterations | default(100) }},
-      "iterations": {{ exact_search_iterations | default(100) }},
-      "clients": 1
-    },
-    {
       "name": "knn-search-10-50-css",
       "tags": ["search"],
       "operation": "knn-search-10-50-css",
@@ -204,14 +116,6 @@
       "operation": "knn-recall-10-50-css",
       "warmup-iterations": 0,
       "iterations": 1,
-      "clients": 1
-    },
-    {
-      "name": "script-score-query-css",
-      "tags": ["search"],
-      "operation": "script-score-query-css",
-      "warmup-iterations": {{ warmup_iterations | default(100) }},
-      "iterations": {{ exact_search_iterations | default(100) }},
       "clients": 1
     },
     {
@@ -236,14 +140,6 @@
       "operation": "knn-recall-10-50-concurrency",
       "warmup-iterations": 0,
       "iterations": 1,
-      "clients": 1
-    },
-    {
-      "name": "script-score-query-concurrency",
-      "tags": ["search"],
-      "operation": "script-score-query-concurrency",
-      "warmup-iterations": {{ warmup_iterations | default(100) }},
-      "iterations": {{ exact_search_iterations | default(100) }},
       "clients": 1
     },
     {
@@ -550,70 +446,6 @@
         "include-in-reporting": false
       },
       "tags": ["force-merge"]
-    },
-    {
-      "name": "knn-search-default-match-all-force-merge",
-      "tags": ["search-after-force-merge"],
-      "operation": "knn-search-default-match-all",
-      "warmup-iterations": {{ warmup_iterations | default(100) }},
-      "iterations": {{ iterations | default(100) }},
-      "clients": 1
-    },
-    {
-      "name": "knn-search-default-match-all-multi-client-force-merge",
-      "tags": ["search-after-force-merge"],
-      "operation": "knn-search-default-match-all",
-      "warmup-iterations": {{ warmup_iterations | default(100) }},
-      "iterations": {{ iterations | default(100) }},
-      "clients": {{ search_clients | default(8) | int }}
-    },
-    {
-      "name": "knn-recall-default-match-all-force-merge",
-      "tags": ["search-after-force-merge"],
-      "operation": "knn-recall-default-match-all",
-      "warmup-iterations": 0,
-      "iterations": 1,
-      "clients": 1
-    },
-    {
-      "name": "knn-search-10-50-match-all-force-merge",
-      "tags": ["search-after-force-merge"],
-      "operation": "knn-search-10-50-match-all",
-      "warmup-iterations": {{ warmup_iterations | default(100) }},
-      "iterations": {{ iterations | default(100) }},
-      "clients": 1
-    },
-    {
-      "name": "knn-recall-10-50-match-all-force-merge",
-      "tags": ["search-after-force-merge"],
-      "operation": "knn-recall-10-50-match-all",
-      "warmup-iterations": 0,
-      "iterations": 1,
-      "clients": 1
-    },
-    {
-      "name": "knn-search-100-300-match-all-force-merge",
-      "tags": ["search-after-force-merge"],
-      "operation": "knn-search-100-300-match-all",
-      "warmup-iterations": {{ warmup_iterations | default(100) }},
-      "iterations": {{ iterations | default(100) }},
-      "clients": 1
-    },
-    {
-      "name": "knn-search-100-300-match-all-multi-client-force-merge",
-      "tags": ["search-after-force-merge"],
-      "operation": "knn-search-100-300-match-all",
-      "warmup-iterations": {{ warmup_iterations | default(100) }},
-      "iterations": {{ iterations | default(100) }},
-      "clients": {{ search_clients | default(8) | int }}
-    },
-    {
-      "name": "knn-recall-100-300-match-all-force-merge",
-      "tags": ["search-after-force-merge"],
-      "operation": "knn-recall-100-300-match-all",
-      "warmup-iterations": 0,
-      "iterations": 1,
-      "clients": 1
     },
     {
       "name": "knn-search-10-50-acceptedAnswerId-force-merge",

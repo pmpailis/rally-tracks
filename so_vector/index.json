@@ -32,7 +32,7 @@
         "index" : true,
         "similarity": "dot_product",
         "index_options": {
-          "type": {{ vector_index_type | default("bbq_hnsw") | tojson }}
+          "type": {{ vector_index_type | default("bbq_disk") | tojson }}
         }
       },
       "acceptedAnswerId": {
