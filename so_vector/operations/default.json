@@ -25,7 +25,7 @@
   "param-source": "knn-recall-param-source",
   "k": 10,
   "num_candidates": 50,
-  "include-in-reporting": false,
+  "include-in-reporting": true,
   "filter": {
     "exists": {
       "field": "acceptedAnswerId"
@@ -61,7 +61,7 @@
   "param-source": "knn-recall-param-source",
   "k": 10,
   "num_candidates": 50,
-  "include-in-reporting": false,
+  "include-in-reporting": true,
   "filter": {
     "terms": {
       "tags": [
@@ -99,7 +99,7 @@
   "param-source": "knn-recall-param-source",
   "k": 10,
   "num_candidates": 50,
-  "include-in-reporting": false,
+  "include-in-reporting": true,
   "filter": {
     "terms": {
       "tags": [
@@ -137,7 +137,7 @@
   "param-source": "knn-recall-param-source",
   "k": 10,
   "num_candidates": 50,
-  "include-in-reporting": false,
+  "include-in-reporting": true,
   "filter": {
     "terms": {
       "tags": [
@@ -175,7 +175,7 @@
   "param-source": "knn-recall-param-source",
   "k": 10,
   "num_candidates": 50,
-  "include-in-reporting": false,
+  "include-in-reporting": true,
   "filter": {
     "range": {
       "questionId": {
@@ -213,7 +213,7 @@
   "param-source": "knn-recall-param-source",
   "k": 100,
   "num_candidates": 300,
-  "include-in-reporting": false,
+  "include-in-reporting": true,
   "filter": {
     "range": {
       "questionId": {
@@ -251,7 +251,7 @@
   "param-source": "knn-recall-param-source",
   "k": 10,
   "num_candidates": 50,
-  "include-in-reporting": false,
+  "include-in-reporting": true,
   "filter": {
     "range": {
       "questionId": {
@@ -289,7 +289,7 @@
   "param-source": "knn-recall-param-source",
   "k": 100,
   "num_candidates": 300,
-  "include-in-reporting": false,
+  "include-in-reporting": true,
   "filter": {
     "range": {
       "questionId": {
@@ -313,7 +313,7 @@
   "operation-type": "knn-recall",
   "request-timeout": 600,
   "param-source": "knn-recall-param-source",
-  "include-in-reporting": false
+  "include-in-reporting": true
 },
 {
   "name": "knn-search-default-random-20-percent",
@@ -338,7 +338,7 @@
   "operation-type": "knn-recall",
   "request-timeout": 600,
   "param-source": "knn-recall-param-source",
-  "include-in-reporting": false,
+  "include-in-reporting": true,
   "filter": {
     "range": {
       "questionId": {
@@ -368,7 +368,7 @@
   "param-source": "knn-recall-param-source",
   "k": 10,
   "num_candidates": 50,
-  "include-in-reporting": false
+  "include-in-reporting": true
 },
 {
   "name": "knn-search-100-300-match-all",
@@ -391,7 +391,7 @@
   "param-source": "knn-recall-param-source",
   "k": 100,
   "num_candidates": 300,
-  "include-in-reporting": false
+  "include-in-reporting": true
 },
 {
   "name": "script-score-query-css",
@@ -558,4 +558,1348 @@
   "k": 10,
   "exact": true,
   "filter": "questionId <= 650000"
+},
+{
+  "name": "knn-search-10-50-filter-16-percent",
+  "operation-type": "search",
+  "param-source": "knn-param-source",
+  "k": 10,
+  "num_candidates": 50,
+  "filter": {
+        "bool": {
+            "should": [
+                {
+                    "range": {
+                        "questionId": {
+                            "gte": 2130000,
+                            "lte": 2260000
+                        }
+                    }
+                },
+                {
+                    "terms": {
+                        "tags": [
+                            "python",
+                            "sql",
+                            "objective-c",
+                            "css",
+                            "c",
+                            "sql-server"
+                        ]
+                    }
+                }
+            ]
+        }
+  }
+},
+{
+    "name": "knn-recall-10-50-filter-16-percent",
+    "operation-type": "knn-recall",
+    "request-timeout": 600,
+    "param-source": "knn-recall-param-source",
+    "k": 10,
+    "num_candidates": 50,
+    "include-in-reporting": true,
+    "filter": {
+        "bool": {
+            "should": [
+                {
+                    "range": {
+                        "questionId": {
+                            "gte": 2130000,
+                            "lte": 2260000
+                        }
+                    }
+                },
+                {
+                    "terms": {
+                        "tags": [
+                            "python",
+                            "sql",
+                            "objective-c",
+                            "css",
+                            "c",
+                            "sql-server"
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+},
+{
+  "name": "knn-search-10-50-filter-32-percent",
+  "operation-type": "search",
+  "param-source": "knn-param-source",
+  "k": 10,
+  "num_candidates": 50,
+  "filter":  {
+        "bool": {
+            "should": [
+                {
+                    "range": {
+                        "questionId": {
+                            "gte": 1530000,
+                            "lte": 2280000
+                        }
+                    }
+                },
+                {
+                    "terms": {
+                        "tags": [
+                            "c++",
+                            "android",
+                            "python",
+                            "sql",
+                            "objective-c",
+                            "ruby-on-rails",
+                            "css",
+                            "c",
+                            "sql-server"
+                        ]
+                    }
+                }
+            ]
+        }
+  }
+},
+{
+    "name": "knn-recall-10-50-filter-32-percent",
+    "operation-type": "knn-recall",
+    "request-timeout": 600,
+    "param-source": "knn-recall-param-source",
+    "k": 10,
+    "num_candidates": 50,
+    "include-in-reporting": true,
+    "filter":  {
+        "bool": {
+            "should": [
+                {
+                    "range": {
+                        "questionId": {
+                            "gte": 1530000,
+                            "lte": 2280000
+                        }
+                    }
+                },
+                {
+                    "terms": {
+                        "tags": [
+                            "c++",
+                            "android",
+                            "python",
+                            "sql",
+                            "objective-c",
+                            "ruby-on-rails",
+                            "css",
+                            "c",
+                            "sql-server"
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+},
+{
+  "name": "knn-search-10-50-filter-42-percent",
+  "operation-type": "search",
+  "param-source": "knn-param-source",
+  "k": 10,
+  "num_candidates": 50,
+  "filter":  {
+        "bool": {
+            "should": [
+                {
+                    "range": {
+                        "questionId": {
+                            "gte": 1230000,
+                            "lte": 2580000
+                        }
+                    }
+                },
+                {
+                    "terms": {
+                        "tags": [
+                            "asp.net",
+                            "c++",
+                            "android",
+                            "python",
+                            "sql",
+                            "objective-c",
+                            "ruby-on-rails",
+                            "css",
+                            "c",
+                            "sql-server"
+                        ]
+                    }
+                }
+            ]
+        }
+  }
+},
+{
+    "name": "knn-recall-10-50-filter-42-percent",
+    "operation-type": "knn-recall",
+    "request-timeout": 600,
+    "param-source": "knn-recall-param-source",
+    "k": 10,
+    "num_candidates": 50,
+    "include-in-reporting": true,
+    "filter":  {
+        "bool": {
+            "should": [
+                {
+                    "range": {
+                        "questionId": {
+                            "gte": 1230000,
+                            "lte": 2580000
+                        }
+                    }
+                },
+                {
+                    "terms": {
+                        "tags": [
+                            "asp.net",
+                            "c++",
+                            "android",
+                            "python",
+                            "sql",
+                            "objective-c",
+                            "ruby-on-rails",
+                            "css",
+                            "c",
+                            "sql-server"
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+},
+{
+  "name": "knn-search-10-50-filter-53-percent",
+  "operation-type": "search",
+  "param-source": "knn-param-source",
+  "k": 10,
+  "num_candidates": 50,
+  "filter":  {
+        "bool": {
+            "should": [
+                {
+                    "range": {
+                        "questionId": {
+                            "gte": 900000,
+                            "lte": 3180000
+                        }
+                    }
+                },
+                {
+                    "terms": {
+                        "tags": [
+                            "asp.net",
+                            "c++",
+                            "android",
+                            "python",
+                            "html",
+                            "mysql",
+                            "sql",
+                            "objective-c",
+                            "ruby-on-rails",
+                            "css",
+                            "c",
+                            "sql-server"
+                        ]
+                    }
+                }
+            ]
+        }
+  }
+},
+{
+    "name": "knn-recall-10-50-filter-53-percent",
+    "operation-type": "knn-recall",
+    "request-timeout": 600,
+    "param-source": "knn-recall-param-source",
+    "k": 10,
+    "num_candidates": 50,
+    "include-in-reporting": true,
+    "filter":  {
+        "bool": {
+            "should": [
+                {
+                    "range": {
+                        "questionId": {
+                            "gte": 900000,
+                            "lte": 3180000
+                        }
+                    }
+                },
+                {
+                    "terms": {
+                        "tags": [
+                            "asp.net",
+                            "c++",
+                            "android",
+                            "python",
+                            "html",
+                            "mysql",
+                            "sql",
+                            "objective-c",
+                            "ruby-on-rails",
+                            "css",
+                            "c",
+                            "sql-server"
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+},
+{
+  "name": "knn-search-10-50-filter-62-percent",
+  "operation-type": "search",
+  "param-source": "knn-param-source",
+  "k": 10,
+  "num_candidates": 50,
+  "filter":  {
+        "bool": {
+            "should": [
+                {
+                    "range": {
+                        "questionId": {
+                            "gte": 600000,
+                            "lte": 2580000
+                        }
+                    }
+                },
+                {
+                    "terms": {
+                        "tags": [
+                            "javascript",
+                            "jquery",
+                            ".net",
+                            "iphone",
+                            "asp.net",
+                            "c++",
+                            "android",
+                            "python",
+                            "html",
+                            "mysql",
+                            "sql",
+                            "objective-c",
+                            "ruby-on-rails",
+                            "css",
+                            "c",
+                            "sql-server"
+                        ]
+                    }
+                }
+            ]
+        }
+  }
+},
+{
+    "name": "knn-recall-10-50-filter-62-percent",
+    "operation-type": "knn-recall",
+    "request-timeout": 600,
+    "param-source": "knn-recall-param-source",
+    "k": 10,
+    "num_candidates": 50,
+    "include-in-reporting": true,
+    "filter":  {
+        "bool": {
+            "should": [
+                {
+                    "range": {
+                        "questionId": {
+                            "gte": 600000,
+                            "lte": 2580000
+                        }
+                    }
+                },
+                {
+                    "terms": {
+                        "tags": [
+                            "javascript",
+                            "jquery",
+                            ".net",
+                            "iphone",
+                            "asp.net",
+                            "c++",
+                            "android",
+                            "python",
+                            "html",
+                            "mysql",
+                            "sql",
+                            "objective-c",
+                            "ruby-on-rails",
+                            "css",
+                            "c",
+                            "sql-server"
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+},
+{
+  "name": "knn-search-10-50-filter-74-percent",
+  "operation-type": "search",
+  "param-source": "knn-param-source",
+  "k": 10,
+  "num_candidates": 50,
+  "filter":  {
+        "bool": {
+            "should": [
+                {
+                    "range": {
+                        "questionId": {
+                            "gte": 500000,
+                            "lte": 2980000
+                        }
+                    }
+                },
+                {
+                    "terms": {
+                        "tags": [
+                            "java",
+                            "php",
+                            "javascript",
+                            "jquery",
+                            ".net",
+                            "iphone",
+                            "asp.net",
+                            "c++",
+                            "android",
+                            "python",
+                            "html",
+                            "mysql",
+                            "sql",
+                            "objective-c",
+                            "ruby-on-rails",
+                            "css",
+                            "c",
+                            "sql-server"
+                        ]
+                    }
+                }
+            ]
+        }
+  }
+},
+{
+    "name": "knn-recall-10-50-filter-74-percent",
+    "operation-type": "knn-recall",
+    "request-timeout": 600,
+    "param-source": "knn-recall-param-source",
+    "k": 10,
+    "num_candidates": 50,
+    "include-in-reporting": true,
+    "filter":  {
+        "bool": {
+            "should": [
+                {
+                    "range": {
+                        "questionId": {
+                            "gte": 500000,
+                            "lte": 2980000
+                        }
+                    }
+                },
+                {
+                    "terms": {
+                        "tags": [
+                            "java",
+                            "php",
+                            "javascript",
+                            "jquery",
+                            ".net",
+                            "iphone",
+                            "asp.net",
+                            "c++",
+                            "android",
+                            "python",
+                            "html",
+                            "mysql",
+                            "sql",
+                            "objective-c",
+                            "ruby-on-rails",
+                            "css",
+                            "c",
+                            "sql-server"
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+},
+{
+  "name": "knn-search-10-50-filter-83-percent",
+  "operation-type": "search",
+  "param-source": "knn-param-source",
+  "k": 10,
+  "num_candidates": 50,
+  "filter":  {
+        "bool": {
+            "should": [
+                {
+                    "range": {
+                        "questionId": {
+                            "gte": 400000,
+                            "lte": 3980000
+                        }
+                    }
+                },
+                {
+                    "terms": {
+                        "tags": [
+                            "c#",
+                            "java",
+                            "php",
+                            "javascript",
+                            "jquery",
+                            ".net",
+                            "iphone",
+                            "asp.net",
+                            "c++",
+                            "android",
+                            "python",
+                            "html",
+                            "mysql",
+                            "sql",
+                            "objective-c",
+                            "ruby-on-rails",
+                            "css",
+                            "c",
+                            "sql-server"
+                        ]
+                    }
+                }
+            ]
+        }
+  }
+},
+{
+    "name": "knn-recall-10-50-filter-83-percent",
+    "operation-type": "knn-recall",
+    "request-timeout": 600,
+    "param-source": "knn-recall-param-source",
+    "k": 10,
+    "num_candidates": 50,
+    "include-in-reporting": true,
+    "filter":  {
+        "bool": {
+            "should": [
+                {
+                    "range": {
+                        "questionId": {
+                            "gte": 400000,
+                            "lte": 3980000
+                        }
+                    }
+                },
+                {
+                    "terms": {
+                        "tags": [
+                            "c#",
+                            "java",
+                            "php",
+                            "javascript",
+                            "jquery",
+                            ".net",
+                            "iphone",
+                            "asp.net",
+                            "c++",
+                            "android",
+                            "python",
+                            "html",
+                            "mysql",
+                            "sql",
+                            "objective-c",
+                            "ruby-on-rails",
+                            "css",
+                            "c",
+                            "sql-server"
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+},
+{
+  "name": "knn-search-10-50-filter-94-percent",
+  "operation-type": "search",
+  "param-source": "knn-param-source",
+  "k": 10,
+  "num_candidates": 50,
+  "filter":  {
+        "bool": {
+            "should": [
+                {
+                    "range": {
+                        "questionId": {
+                            "gte": 0,
+                            "lte": 5980000
+                        }
+                    }
+                },
+                {
+                    "terms": {
+                        "tags": [
+                            "c#",
+                            "java",
+                            "php",
+                            "javascript",
+                            "jquery",
+                            ".net",
+                            "iphone",
+                            "asp.net",
+                            "c++",
+                            "android",
+                            "python",
+                            "html",
+                            "mysql",
+                            "sql",
+                            "objective-c",
+                            "ruby-on-rails",
+                            "css",
+                            "c",
+                            "sql-server",
+                            "wpf",
+                            "asp.net-mvc",
+                            "ruby"
+                        ]
+                    }
+                }
+            ]
+        }
+  }
+},
+{
+    "name": "knn-recall-10-50-filter-94-percent",
+    "operation-type": "knn-recall",
+    "request-timeout": 600,
+    "param-source": "knn-recall-param-source",
+    "k": 10,
+    "num_candidates": 50,
+    "include-in-reporting": true,
+    "filter":  {
+        "bool": {
+            "should": [
+                {
+                    "range": {
+                        "questionId": {
+                            "gte": 0,
+                            "lte": 5980000
+                        }
+                    }
+                },
+                {
+                    "terms": {
+                        "tags": [
+                            "c#",
+                            "java",
+                            "php",
+                            "javascript",
+                            "jquery",
+                            ".net",
+                            "iphone",
+                            "asp.net",
+                            "c++",
+                            "android",
+                            "python",
+                            "html",
+                            "mysql",
+                            "sql",
+                            "objective-c",
+                            "ruby-on-rails",
+                            "css",
+                            "c",
+                            "sql-server",
+                            "wpf",
+                            "asp.net-mvc",
+                            "ruby"
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+},
+{
+  "name": "knn-search-100-300-filter-16-percent",
+  "operation-type": "search",
+  "param-source": "knn-param-source",
+  "k": 100,
+  "num_candidates": 300,
+  "filter": {
+        "bool": {
+            "should": [
+                {
+                    "range": {
+                        "questionId": {
+                            "gte": 2130000,
+                            "lte": 2260000
+                        }
+                    }
+                },
+                {
+                    "terms": {
+                        "tags": [
+                            "python",
+                            "sql",
+                            "objective-c",
+                            "css",
+                            "c",
+                            "sql-server"
+                        ]
+                    }
+                }
+            ]
+        }
+  }
+},
+{
+    "name": "knn-recall-100-300-filter-16-percent",
+    "operation-type": "knn-recall",
+    "request-timeout": 600,
+    "param-source": "knn-recall-param-source",
+    "k": 100,
+    "num_candidates": 300,
+    "include-in-reporting": true,
+    "filter": {
+        "bool": {
+            "should": [
+                {
+                    "range": {
+                        "questionId": {
+                            "gte": 2130000,
+                            "lte": 2260000
+                        }
+                    }
+                },
+                {
+                    "terms": {
+                        "tags": [
+                            "python",
+                            "sql",
+                            "objective-c",
+                            "css",
+                            "c",
+                            "sql-server"
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+},
+{
+  "name": "knn-search-100-300-filter-32-percent",
+  "operation-type": "search",
+  "param-source": "knn-param-source",
+  "k": 100,
+  "num_candidates": 300,
+  "filter":  {
+        "bool": {
+            "should": [
+                {
+                    "range": {
+                        "questionId": {
+                            "gte": 1530000,
+                            "lte": 2280000
+                        }
+                    }
+                },
+                {
+                    "terms": {
+                        "tags": [
+                            "c++",
+                            "android",
+                            "python",
+                            "sql",
+                            "objective-c",
+                            "ruby-on-rails",
+                            "css",
+                            "c",
+                            "sql-server"
+                        ]
+                    }
+                }
+            ]
+        }
+  }
+},
+{
+    "name": "knn-recall-100-300-filter-32-percent",
+    "operation-type": "knn-recall",
+    "request-timeout": 600,
+    "param-source": "knn-recall-param-source",
+    "k": 100,
+    "num_candidates": 300,
+    "include-in-reporting": true,
+    "filter":  {
+        "bool": {
+            "should": [
+                {
+                    "range": {
+                        "questionId": {
+                            "gte": 1530000,
+                            "lte": 2280000
+                        }
+                    }
+                },
+                {
+                    "terms": {
+                        "tags": [
+                            "c++",
+                            "android",
+                            "python",
+                            "sql",
+                            "objective-c",
+                            "ruby-on-rails",
+                            "css",
+                            "c",
+                            "sql-server"
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+},
+{
+  "name": "knn-search-100-300-filter-42-percent",
+  "operation-type": "search",
+  "param-source": "knn-param-source",
+  "k": 100,
+  "num_candidates": 300,
+  "filter":  {
+        "bool": {
+            "should": [
+                {
+                    "range": {
+                        "questionId": {
+                            "gte": 1230000,
+                            "lte": 2580000
+                        }
+                    }
+                },
+                {
+                    "terms": {
+                        "tags": [
+                            "asp.net",
+                            "c++",
+                            "android",
+                            "python",
+                            "sql",
+                            "objective-c",
+                            "ruby-on-rails",
+                            "css",
+                            "c",
+                            "sql-server"
+                        ]
+                    }
+                }
+            ]
+        }
+  }
+},
+{
+    "name": "knn-recall-100-300-filter-42-percent",
+    "operation-type": "knn-recall",
+    "request-timeout": 600,
+    "param-source": "knn-recall-param-source",
+    "k": 100,
+    "num_candidates": 300,
+    "include-in-reporting": true,
+    "filter":  {
+        "bool": {
+            "should": [
+                {
+                    "range": {
+                        "questionId": {
+                            "gte": 1230000,
+                            "lte": 2580000
+                        }
+                    }
+                },
+                {
+                    "terms": {
+                        "tags": [
+                            "asp.net",
+                            "c++",
+                            "android",
+                            "python",
+                            "sql",
+                            "objective-c",
+                            "ruby-on-rails",
+                            "css",
+                            "c",
+                            "sql-server"
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+},
+{
+  "name": "knn-search-100-300-filter-53-percent",
+  "operation-type": "search",
+  "param-source": "knn-param-source",
+  "k": 100,
+  "num_candidates": 300,
+  "filter":  {
+        "bool": {
+            "should": [
+                {
+                    "range": {
+                        "questionId": {
+                            "gte": 900000,
+                            "lte": 3180000
+                        }
+                    }
+                },
+                {
+                    "terms": {
+                        "tags": [
+                            "asp.net",
+                            "c++",
+                            "android",
+                            "python",
+                            "html",
+                            "mysql",
+                            "sql",
+                            "objective-c",
+                            "ruby-on-rails",
+                            "css",
+                            "c",
+                            "sql-server"
+                        ]
+                    }
+                }
+            ]
+        }
+  }
+},
+{
+    "name": "knn-recall-100-300-filter-53-percent",
+    "operation-type": "knn-recall",
+    "request-timeout": 600,
+    "param-source": "knn-recall-param-source",
+    "k": 100,
+    "num_candidates": 300,
+    "include-in-reporting": true,
+    "filter":  {
+        "bool": {
+            "should": [
+                {
+                    "range": {
+                        "questionId": {
+                            "gte": 900000,
+                            "lte": 3180000
+                        }
+                    }
+                },
+                {
+                    "terms": {
+                        "tags": [
+                            "asp.net",
+                            "c++",
+                            "android",
+                            "python",
+                            "html",
+                            "mysql",
+                            "sql",
+                            "objective-c",
+                            "ruby-on-rails",
+                            "css",
+                            "c",
+                            "sql-server"
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+},
+{
+  "name": "knn-search-100-300-filter-62-percent",
+  "operation-type": "search",
+  "param-source": "knn-param-source",
+  "k": 100,
+  "num_candidates": 300,
+  "filter":  {
+        "bool": {
+            "should": [
+                {
+                    "range": {
+                        "questionId": {
+                            "gte": 600000,
+                            "lte": 2580000
+                        }
+                    }
+                },
+                {
+                    "terms": {
+                        "tags": [
+                            "javascript",
+                            "jquery",
+                            ".net",
+                            "iphone",
+                            "asp.net",
+                            "c++",
+                            "android",
+                            "python",
+                            "html",
+                            "mysql",
+                            "sql",
+                            "objective-c",
+                            "ruby-on-rails",
+                            "css",
+                            "c",
+                            "sql-server"
+                        ]
+                    }
+                }
+            ]
+        }
+  }
+},
+{
+    "name": "knn-recall-100-300-filter-62-percent",
+    "operation-type": "knn-recall",
+    "request-timeout": 600,
+    "param-source": "knn-recall-param-source",
+    "k": 100,
+    "num_candidates": 300,
+    "include-in-reporting": true,
+    "filter":  {
+        "bool": {
+            "should": [
+                {
+                    "range": {
+                        "questionId": {
+                            "gte": 600000,
+                            "lte": 2580000
+                        }
+                    }
+                },
+                {
+                    "terms": {
+                        "tags": [
+                            "javascript",
+                            "jquery",
+                            ".net",
+                            "iphone",
+                            "asp.net",
+                            "c++",
+                            "android",
+                            "python",
+                            "html",
+                            "mysql",
+                            "sql",
+                            "objective-c",
+                            "ruby-on-rails",
+                            "css",
+                            "c",
+                            "sql-server"
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+},
+{
+  "name": "knn-search-100-300-filter-74-percent",
+  "operation-type": "search",
+  "param-source": "knn-param-source",
+  "k": 100,
+  "num_candidates": 300,
+  "filter":  {
+        "bool": {
+            "should": [
+                {
+                    "range": {
+                        "questionId": {
+                            "gte": 500000,
+                            "lte": 2980000
+                        }
+                    }
+                },
+                {
+                    "terms": {
+                        "tags": [
+                            "java",
+                            "php",
+                            "javascript",
+                            "jquery",
+                            ".net",
+                            "iphone",
+                            "asp.net",
+                            "c++",
+                            "android",
+                            "python",
+                            "html",
+                            "mysql",
+                            "sql",
+                            "objective-c",
+                            "ruby-on-rails",
+                            "css",
+                            "c",
+                            "sql-server"
+                        ]
+                    }
+                }
+            ]
+        }
+  }
+},
+{
+    "name": "knn-recall-100-300-filter-74-percent",
+    "operation-type": "knn-recall",
+    "request-timeout": 600,
+    "param-source": "knn-recall-param-source",
+    "k": 100,
+    "num_candidates": 300,
+    "include-in-reporting": true,
+    "filter":  {
+        "bool": {
+            "should": [
+                {
+                    "range": {
+                        "questionId": {
+                            "gte": 500000,
+                            "lte": 2980000
+                        }
+                    }
+                },
+                {
+                    "terms": {
+                        "tags": [
+                            "java",
+                            "php",
+                            "javascript",
+                            "jquery",
+                            ".net",
+                            "iphone",
+                            "asp.net",
+                            "c++",
+                            "android",
+                            "python",
+                            "html",
+                            "mysql",
+                            "sql",
+                            "objective-c",
+                            "ruby-on-rails",
+                            "css",
+                            "c",
+                            "sql-server"
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+},
+{
+  "name": "knn-search-100-300-filter-83-percent",
+  "operation-type": "search",
+  "param-source": "knn-param-source",
+  "k": 100,
+  "num_candidates": 300,
+  "filter":  {
+        "bool": {
+            "should": [
+                {
+                    "range": {
+                        "questionId": {
+                            "gte": 400000,
+                            "lte": 3980000
+                        }
+                    }
+                },
+                {
+                    "terms": {
+                        "tags": [
+                            "c#",
+                            "java",
+                            "php",
+                            "javascript",
+                            "jquery",
+                            ".net",
+                            "iphone",
+                            "asp.net",
+                            "c++",
+                            "android",
+                            "python",
+                            "html",
+                            "mysql",
+                            "sql",
+                            "objective-c",
+                            "ruby-on-rails",
+                            "css",
+                            "c",
+                            "sql-server"
+                        ]
+                    }
+                }
+            ]
+        }
+  }
+},
+{
+    "name": "knn-recall-100-300-filter-83-percent",
+    "operation-type": "knn-recall",
+    "request-timeout": 600,
+    "param-source": "knn-recall-param-source",
+    "k": 100,
+    "num_candidates": 300,
+    "include-in-reporting": true,
+    "filter":  {
+        "bool": {
+            "should": [
+                {
+                    "range": {
+                        "questionId": {
+                            "gte": 400000,
+                            "lte": 3980000
+                        }
+                    }
+                },
+                {
+                    "terms": {
+                        "tags": [
+                            "c#",
+                            "java",
+                            "php",
+                            "javascript",
+                            "jquery",
+                            ".net",
+                            "iphone",
+                            "asp.net",
+                            "c++",
+                            "android",
+                            "python",
+                            "html",
+                            "mysql",
+                            "sql",
+                            "objective-c",
+                            "ruby-on-rails",
+                            "css",
+                            "c",
+                            "sql-server"
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+},
+{
+  "name": "knn-search-100-300-filter-94-percent",
+  "operation-type": "search",
+  "param-source": "knn-param-source",
+  "k": 100,
+  "num_candidates": 300,
+  "filter":  {
+        "bool": {
+            "should": [
+                {
+                    "range": {
+                        "questionId": {
+                            "gte": 0,
+                            "lte": 5980000
+                        }
+                    }
+                },
+                {
+                    "terms": {
+                        "tags": [
+                            "c#",
+                            "java",
+                            "php",
+                            "javascript",
+                            "jquery",
+                            ".net",
+                            "iphone",
+                            "asp.net",
+                            "c++",
+                            "android",
+                            "python",
+                            "html",
+                            "mysql",
+                            "sql",
+                            "objective-c",
+                            "ruby-on-rails",
+                            "css",
+                            "c",
+                            "sql-server",
+                            "wpf",
+                            "asp.net-mvc",
+                            "ruby"
+                        ]
+                    }
+                }
+            ]
+        }
+  }
+},
+{
+    "name": "knn-recall-100-300-filter-94-percent",
+    "operation-type": "knn-recall",
+    "request-timeout": 600,
+    "param-source": "knn-recall-param-source",
+    "k": 100,
+    "num_candidates": 300,
+    "include-in-reporting": true,
+    "filter":  {
+        "bool": {
+            "should": [
+                {
+                    "range": {
+                        "questionId": {
+                            "gte": 0,
+                            "lte": 5980000
+                        }
+                    }
+                },
+                {
+                    "terms": {
+                        "tags": [
+                            "c#",
+                            "java",
+                            "php",
+                            "javascript",
+                            "jquery",
+                            ".net",
+                            "iphone",
+                            "asp.net",
+                            "c++",
+                            "android",
+                            "python",
+                            "html",
+                            "mysql",
+                            "sql",
+                            "objective-c",
+                            "ruby-on-rails",
+                            "css",
+                            "c",
+                            "sql-server",
+                            "wpf",
+                            "asp.net-mvc",
+                            "ruby"
+                        ]
+                    }
+                }
+            ]
+        }
+    }
 }
