@@ -76,6 +76,7 @@ class KnnParamSource:
     def params(self):
         result = {"index": self._index_name, "cache": self._params.get("cache", False), "size": self._params.get("k", 10)}
         num_candidates: int | None = self._params.get("num_candidates", None)
+        post_filtering_threshold = self._params.get("post_filtering_threshold", None)
         # if -1, then its unset. If set, just set it.
         oversample = self._params.get("oversample", -1)
         if oversample > -1 and self._exact_scan:
@@ -105,6 +106,7 @@ class KnnParamSource:
                     "field": "titleVector",
                     "query_vector": query_vec,
                     "k": self._params.get("k", DEFAULT_K),
+                    "post_filtering_threshold": post_filtering_threshold if post_filtering_threshold is not None else 0.8,
                     **({"num_candidates": num_candidates} if num_candidates is not None else {}),
                 }
             }
@@ -215,6 +217,7 @@ class KnnRecallParamSource:
             "cache": self._params.get("cache", False),
             "size": self._params.get("k", 10),
             "num_candidates": self._params.get("num_candidates", 50),
+            "post_filtering_threshold": self._params.get("post_filtering_threshold", 50),
             "oversample": self._params.get("oversample", -1),
             "knn_vector_store": KnnVectorStore(),
             "filter": self._params.get("filter", None),
@@ -225,12 +228,13 @@ class KnnRecallParamSource:
 # Used in tandem with the KnnRecallParamSource.
 # reads the queries, executes knn search and compares the results with the true nearest neighbors
 class KnnRecallRunner:
-    def get_knn_query(self, query_vec, k, num_candidates, filter, oversample):
+    def get_knn_query(self, query_vec, k, num_candidates, filter, oversample, post_filtering_threshold):
         knn = {
             "field": "titleVector",
             "query_vector": query_vec,
             "k": k,
             "num_candidates": num_candidates,
+            "post_filtering_threshold": post_filtering_threshold,
         }
         if oversample > -1:
             knn["rescore_vector"] = {"oversample": oversample}
@@ -245,6 +249,7 @@ class KnnRecallRunner:
         request_timeout = params.get("request-timeout", None)
         request_cache = params["cache"]
         filter = params["filter"]
+        post_filtering_threshold = params["post_filtering_threshold"]
         recall_total = 0
         exact_total = 0
         min_recall = k
@@ -255,7 +260,7 @@ class KnnRecallRunner:
 
         knn_vector_store: KnnVectorStore = params["knn_vector_store"]
         for query_id, query_vector in enumerate(knn_vector_store.get_query_vectors()):
-            knn_body = self.get_knn_query(query_vector, k, num_candidates, filter, params["oversample"])
+            knn_body = self.get_knn_query(query_vector, k, num_candidates, filter, params["oversample"], post_filtering_threshold)
             knn_result = await es.search(
                 body=knn_body,
                 index=index,
@@ -275,6 +280,7 @@ class KnnRecallRunner:
             "max_recall": max_recall,
             "k": k,
             "num_candidates": num_candidates,
+            "post_filtering_threshold": post_filtering_threshold,
             "oversample": params["oversample"],
             "is_filtered_search": filter is not None,
         }

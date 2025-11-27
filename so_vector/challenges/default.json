@@ -221,258 +221,516 @@
       "clients": 1
     },
     {
-      "name": "knn-search-10-50-filter-16-percent",
+      "name": "knn-search-10-50-filter-enabled-16-percent",
       "tags": ["search"],
-      "operation": "knn-search-10-50-filter-16-percent",
+      "operation": "knn-search-10-50-filter-enabled-16-percent",
       "warmup-iterations": 0,
       "iterations": {{ iterations | default(100) }},
       "clients": 1
     },
     {
-      "name": "knn-recall-10-50-filter-16-percent",
+      "name": "knn-recall-10-50-filter-enabled-16-percent",
       "tags": ["search"],
-      "operation": "knn-recall-10-50-filter-16-percent",
+      "operation": "knn-recall-10-50-filter-enabled-16-percent",
       "warmup-iterations": 0,
       "iterations": 1,
       "clients": 1
     },
     {
-      "name": "knn-search-10-50-filter-32-percent",
+      "name": "knn-search-10-50-filter-enabled-32-percent",
       "tags": ["search"],
-      "operation": "knn-search-10-50-filter-32-percent",
+      "operation": "knn-search-10-50-filter-enabled-32-percent",
       "warmup-iterations": 0,
       "iterations": {{ iterations | default(100) }},
       "clients": 1
     },
     {
-      "name": "knn-recall-10-50-filter-32-percent",
+      "name": "knn-recall-10-50-filter-enabled-32-percent",
       "tags": ["search"],
-      "operation": "knn-recall-10-50-filter-32-percent",
+      "operation": "knn-recall-10-50-filter-enabled-32-percent",
       "warmup-iterations": 0,
       "iterations": 1,
       "clients": 1
     },
     {
-      "name": "knn-search-10-50-filter-42-percent",
+      "name": "knn-search-10-50-filter-enabled-42-percent",
       "tags": ["search"],
-      "operation": "knn-search-10-50-filter-42-percent",
+      "operation": "knn-search-10-50-filter-enabled-42-percent",
       "warmup-iterations": 0,
       "iterations": {{ iterations | default(100) }},
       "clients": 1
     },
     {
-      "name": "knn-recall-10-50-filter-42-percent",
+      "name": "knn-recall-10-50-filter-enabled-42-percent",
       "tags": ["search"],
-      "operation": "knn-recall-10-50-filter-42-percent",
+      "operation": "knn-recall-10-50-filter-enabled-42-percent",
       "warmup-iterations": 0,
       "iterations": 1,
       "clients": 1
     },
     {
-      "name": "knn-search-10-50-filter-53-percent",
+      "name": "knn-search-10-50-filter-enabled-53-percent",
       "tags": ["search"],
-      "operation": "knn-search-10-50-filter-53-percent",
+      "operation": "knn-search-10-50-filter-enabled-53-percent",
       "warmup-iterations": 0,
       "iterations": {{ iterations | default(100) }},
       "clients": 1
     },
     {
-      "name": "knn-recall-10-50-filter-53-percent",
+      "name": "knn-recall-10-50-filter-enabled-53-percent",
       "tags": ["search"],
-      "operation": "knn-recall-10-50-filter-53-percent",
+      "operation": "knn-recall-10-50-filter-enabled-53-percent",
       "warmup-iterations": 0,
       "iterations": 1,
       "clients": 1
     },
     {
-      "name": "knn-search-10-50-filter-62-percent",
+      "name": "knn-search-10-50-filter-enabled-62-percent",
       "tags": ["search"],
-      "operation": "knn-search-10-50-filter-62-percent",
+      "operation": "knn-search-10-50-filter-enabled-62-percent",
       "warmup-iterations": 0,
       "iterations": {{ iterations | default(100) }},
       "clients": 1
     },
     {
-      "name": "knn-recall-10-50-filter-62-percent",
+      "name": "knn-recall-10-50-filter-enabled-62-percent",
       "tags": ["search"],
-      "operation": "knn-recall-10-50-filter-62-percent",
+      "operation": "knn-recall-10-50-filter-enabled-62-percent",
       "warmup-iterations": 0,
       "iterations": 1,
       "clients": 1
     },
     {
-      "name": "knn-search-10-50-filter-74-percent",
+      "name": "knn-search-10-50-filter-enabled-74-percent",
       "tags": ["search"],
-      "operation": "knn-search-10-50-filter-74-percent",
+      "operation": "knn-search-10-50-filter-enabled-74-percent",
       "warmup-iterations": 0,
       "iterations": {{ iterations | default(100) }},
       "clients": 1
     },
     {
-      "name": "knn-recall-10-50-filter-74-percent",
+      "name": "knn-recall-10-50-filter-enabled-74-percent",
       "tags": ["search"],
-      "operation": "knn-recall-10-50-filter-74-percent",
+      "operation": "knn-recall-10-50-filter-enabled-74-percent",
       "warmup-iterations": 0,
       "iterations": 1,
       "clients": 1
     },
     {
-      "name": "knn-search-10-50-filter-83-percent",
+      "name": "knn-search-10-50-filter-enabled-83-percent",
       "tags": ["search"],
-      "operation": "knn-search-10-50-filter-83-percent",
+      "operation": "knn-search-10-50-filter-enabled-83-percent",
       "warmup-iterations": 0,
       "iterations": {{ iterations | default(100) }},
       "clients": 1
     },
     {
-      "name": "knn-recall-10-50-filter-83-percent",
+      "name": "knn-recall-10-50-filter-enabled-83-percent",
       "tags": ["search"],
-      "operation": "knn-recall-10-50-filter-83-percent",
+      "operation": "knn-recall-10-50-filter-enabled-83-percent",
       "warmup-iterations": 0,
       "iterations": 1,
       "clients": 1
     },
     {
-      "name": "knn-search-10-50-filter-94-percent",
+      "name": "knn-search-10-50-filter-enabled-94-percent",
       "tags": ["search"],
-      "operation": "knn-search-10-50-filter-94-percent",
+      "operation": "knn-search-10-50-filter-enabled-94-percent",
       "warmup-iterations": 0,
       "iterations": {{ iterations | default(100) }},
       "clients": 1
     },
     {
-      "name": "knn-recall-10-50-filter-94-percent",
+      "name": "knn-recall-10-50-filter-enabled-94-percent",
       "tags": ["search"],
-      "operation": "knn-recall-10-50-filter-94-percent",
+      "operation": "knn-recall-10-50-filter-enabled-94-percent",
       "warmup-iterations": 0,
       "iterations": 1,
       "clients": 1
     },
 
     {
-      "name": "knn-search-100-300-filter-16-percent",
+      "name": "knn-search-100-300-filter-enabled-16-percent",
       "tags": ["search"],
-      "operation": "knn-search-100-300-filter-16-percent",
+      "operation": "knn-search-100-300-filter-enabled-16-percent",
       "warmup-iterations": 0,
       "iterations": {{ iterations | default(100) }},
       "clients": 1
     },
     {
-      "name": "knn-recall-100-300-filter-16-percent",
+      "name": "knn-recall-100-300-filter-enabled-16-percent",
       "tags": ["search"],
-      "operation": "knn-recall-100-300-filter-16-percent",
+      "operation": "knn-recall-100-300-filter-enabled-16-percent",
       "warmup-iterations": 0,
       "iterations": 1,
       "clients": 1
     },
     {
-      "name": "knn-search-100-300-filter-32-percent",
+      "name": "knn-search-100-300-filter-enabled-32-percent",
       "tags": ["search"],
-      "operation": "knn-search-100-300-filter-32-percent",
+      "operation": "knn-search-100-300-filter-enabled-32-percent",
       "warmup-iterations": 0,
       "iterations": {{ iterations | default(100) }},
       "clients": 1
     },
     {
-      "name": "knn-recall-100-300-filter-32-percent",
+      "name": "knn-recall-100-300-filter-enabled-32-percent",
       "tags": ["search"],
-      "operation": "knn-recall-100-300-filter-32-percent",
+      "operation": "knn-recall-100-300-filter-enabled-32-percent",
       "warmup-iterations": 0,
       "iterations": 1,
       "clients": 1
     },
     {
-      "name": "knn-search-100-300-filter-42-percent",
+      "name": "knn-search-100-300-filter-enabled-42-percent",
       "tags": ["search"],
-      "operation": "knn-search-100-300-filter-42-percent",
+      "operation": "knn-search-100-300-filter-enabled-42-percent",
       "warmup-iterations": 0,
       "iterations": {{ iterations | default(100) }},
       "clients": 1
     },
     {
-      "name": "knn-recall-100-300-filter-42-percent",
+      "name": "knn-recall-100-300-filter-enabled-42-percent",
       "tags": ["search"],
-      "operation": "knn-recall-100-300-filter-42-percent",
+      "operation": "knn-recall-100-300-filter-enabled-42-percent",
       "warmup-iterations": 0,
       "iterations": 1,
       "clients": 1
     },
     {
-      "name": "knn-search-100-300-filter-53-percent",
+      "name": "knn-search-100-300-filter-enabled-53-percent",
       "tags": ["search"],
-      "operation": "knn-search-100-300-filter-53-percent",
+      "operation": "knn-search-100-300-filter-enabled-53-percent",
       "warmup-iterations": 0,
       "iterations": {{ iterations | default(100) }},
       "clients": 1
     },
     {
-      "name": "knn-recall-100-300-filter-53-percent",
+      "name": "knn-recall-100-300-filter-enabled-53-percent",
       "tags": ["search"],
-      "operation": "knn-recall-100-300-filter-53-percent",
+      "operation": "knn-recall-100-300-filter-enabled-53-percent",
       "warmup-iterations": 0,
       "iterations": 1,
       "clients": 1
     },
     {
-      "name": "knn-search-100-300-filter-62-percent",
+      "name": "knn-search-100-300-filter-enabled-62-percent",
       "tags": ["search"],
-      "operation": "knn-search-100-300-filter-62-percent",
+      "operation": "knn-search-100-300-filter-enabled-62-percent",
       "warmup-iterations": 0,
       "iterations": {{ iterations | default(100) }},
       "clients": 1
     },
     {
-      "name": "knn-recall-100-300-filter-62-percent",
+      "name": "knn-recall-100-300-filter-enabled-62-percent",
       "tags": ["search"],
-      "operation": "knn-recall-100-300-filter-62-percent",
+      "operation": "knn-recall-100-300-filter-enabled-62-percent",
       "warmup-iterations": 0,
       "iterations": 1,
       "clients": 1
     },
     {
-      "name": "knn-search-100-300-filter-74-percent",
+      "name": "knn-search-100-300-filter-enabled-74-percent",
       "tags": ["search"],
-      "operation": "knn-search-100-300-filter-74-percent",
+      "operation": "knn-search-100-300-filter-enabled-74-percent",
       "warmup-iterations": 0,
       "iterations": {{ iterations | default(100) }},
       "clients": 1
     },
     {
-      "name": "knn-recall-100-300-filter-74-percent",
+      "name": "knn-recall-100-300-filter-enabled-74-percent",
       "tags": ["search"],
-      "operation": "knn-recall-100-300-filter-74-percent",
+      "operation": "knn-recall-100-300-filter-enabled-74-percent",
       "warmup-iterations": 0,
       "iterations": 1,
       "clients": 1
     },
     {
-      "name": "knn-search-100-300-filter-83-percent",
+      "name": "knn-search-100-300-filter-enabled-83-percent",
       "tags": ["search"],
-      "operation": "knn-search-100-300-filter-83-percent",
+      "operation": "knn-search-100-300-filter-enabled-83-percent",
       "warmup-iterations": 0,
       "iterations": {{ iterations | default(100) }},
       "clients": 1
     },
     {
-      "name": "knn-recall-100-300-filter-83-percent",
+      "name": "knn-recall-100-300-filter-enabled-83-percent",
       "tags": ["search"],
-      "operation": "knn-recall-100-300-filter-83-percent",
+      "operation": "knn-recall-100-300-filter-enabled-83-percent",
       "warmup-iterations": 0,
       "iterations": 1,
       "clients": 1
     },
     {
-      "name": "knn-search-100-300-filter-94-percent",
+      "name": "knn-search-100-300-filter-enabled-94-percent",
       "tags": ["search"],
-      "operation": "knn-search-100-300-filter-94-percent",
+      "operation": "knn-search-100-300-filter-enabled-94-percent",
       "warmup-iterations": 0,
       "iterations": {{ iterations | default(100) }},
       "clients": 1
     },
     {
-      "name": "knn-recall-100-300-filter-94-percent",
+      "name": "knn-recall-100-300-filter-enabled-94-percent",
       "tags": ["search"],
-      "operation": "knn-recall-100-300-filter-94-percent",
+      "operation": "knn-recall-100-300-filter-enabled-94-percent",
+      "warmup-iterations": 0,
+      "iterations": 1,
+      "clients": 1
+    },
+
+    {
+      "name": "knn-search-10-50-filter-disabled-16-percent",
+      "tags": ["search"],
+      "operation": "knn-search-10-50-filter-disabled-16-percent",
+      "warmup-iterations": 0,
+      "iterations": {{ iterations | default(100) }},
+      "clients": 1
+    },
+    {
+      "name": "knn-recall-10-50-filter-disabled-16-percent",
+      "tags": ["search"],
+      "operation": "knn-recall-10-50-filter-disabled-16-percent",
+      "warmup-iterations": 0,
+      "iterations": 1,
+      "clients": 1
+    },
+    {
+      "name": "knn-search-10-50-filter-disabled-32-percent",
+      "tags": ["search"],
+      "operation": "knn-search-10-50-filter-disabled-32-percent",
+      "warmup-iterations": 0,
+      "iterations": {{ iterations | default(100) }},
+      "clients": 1
+    },
+    {
+      "name": "knn-recall-10-50-filter-disabled-32-percent",
+      "tags": ["search"],
+      "operation": "knn-recall-10-50-filter-disabled-32-percent",
+      "warmup-iterations": 0,
+      "iterations": 1,
+      "clients": 1
+    },
+    {
+      "name": "knn-search-10-50-filter-disabled-42-percent",
+      "tags": ["search"],
+      "operation": "knn-search-10-50-filter-disabled-42-percent",
+      "warmup-iterations": 0,
+      "iterations": {{ iterations | default(100) }},
+      "clients": 1
+    },
+    {
+      "name": "knn-recall-10-50-filter-disabled-42-percent",
+      "tags": ["search"],
+      "operation": "knn-recall-10-50-filter-disabled-42-percent",
+      "warmup-iterations": 0,
+      "iterations": 1,
+      "clients": 1
+    },
+    {
+      "name": "knn-search-10-50-filter-disabled-53-percent",
+      "tags": ["search"],
+      "operation": "knn-search-10-50-filter-disabled-53-percent",
+      "warmup-iterations": 0,
+      "iterations": {{ iterations | default(100) }},
+      "clients": 1
+    },
+    {
+      "name": "knn-recall-10-50-filter-disabled-53-percent",
+      "tags": ["search"],
+      "operation": "knn-recall-10-50-filter-disabled-53-percent",
+      "warmup-iterations": 0,
+      "iterations": 1,
+      "clients": 1
+    },
+    {
+      "name": "knn-search-10-50-filter-disabled-62-percent",
+      "tags": ["search"],
+      "operation": "knn-search-10-50-filter-disabled-62-percent",
+      "warmup-iterations": 0,
+      "iterations": {{ iterations | default(100) }},
+      "clients": 1
+    },
+    {
+      "name": "knn-recall-10-50-filter-disabled-62-percent",
+      "tags": ["search"],
+      "operation": "knn-recall-10-50-filter-disabled-62-percent",
+      "warmup-iterations": 0,
+      "iterations": 1,
+      "clients": 1
+    },
+    {
+      "name": "knn-search-10-50-filter-disabled-74-percent",
+      "tags": ["search"],
+      "operation": "knn-search-10-50-filter-disabled-74-percent",
+      "warmup-iterations": 0,
+      "iterations": {{ iterations | default(100) }},
+      "clients": 1
+    },
+    {
+      "name": "knn-recall-10-50-filter-disabled-74-percent",
+      "tags": ["search"],
+      "operation": "knn-recall-10-50-filter-disabled-74-percent",
+      "warmup-iterations": 0,
+      "iterations": 1,
+      "clients": 1
+    },
+    {
+      "name": "knn-search-10-50-filter-disabled-83-percent",
+      "tags": ["search"],
+      "operation": "knn-search-10-50-filter-disabled-83-percent",
+      "warmup-iterations": 0,
+      "iterations": {{ iterations | default(100) }},
+      "clients": 1
+    },
+    {
+      "name": "knn-recall-10-50-filter-disabled-83-percent",
+      "tags": ["search"],
+      "operation": "knn-recall-10-50-filter-disabled-83-percent",
+      "warmup-iterations": 0,
+      "iterations": 1,
+      "clients": 1
+    },
+    {
+      "name": "knn-search-10-50-filter-disabled-94-percent",
+      "tags": ["search"],
+      "operation": "knn-search-10-50-filter-disabled-94-percent",
+      "warmup-iterations": 0,
+      "iterations": {{ iterations | default(100) }},
+      "clients": 1
+    },
+    {
+      "name": "knn-recall-10-50-filter-disabled-94-percent",
+      "tags": ["search"],
+      "operation": "knn-recall-10-50-filter-disabled-94-percent",
+      "warmup-iterations": 0,
+      "iterations": 1,
+      "clients": 1
+    },
+
+    {
+      "name": "knn-search-100-300-filter-disabled-16-percent",
+      "tags": ["search"],
+      "operation": "knn-search-100-300-filter-disabled-16-percent",
+      "warmup-iterations": 0,
+      "iterations": {{ iterations | default(100) }},
+      "clients": 1
+    },
+    {
+      "name": "knn-recall-100-300-filter-disabled-16-percent",
+      "tags": ["search"],
+      "operation": "knn-recall-100-300-filter-disabled-16-percent",
+      "warmup-iterations": 0,
+      "iterations": 1,
+      "clients": 1
+    },
+    {
+      "name": "knn-search-100-300-filter-disabled-32-percent",
+      "tags": ["search"],
+      "operation": "knn-search-100-300-filter-disabled-32-percent",
+      "warmup-iterations": 0,
+      "iterations": {{ iterations | default(100) }},
+      "clients": 1
+    },
+    {
+      "name": "knn-recall-100-300-filter-disabled-32-percent",
+      "tags": ["search"],
+      "operation": "knn-recall-100-300-filter-disabled-32-percent",
+      "warmup-iterations": 0,
+      "iterations": 1,
+      "clients": 1
+    },
+    {
+      "name": "knn-search-100-300-filter-disabled-42-percent",
+      "tags": ["search"],
+      "operation": "knn-search-100-300-filter-disabled-42-percent",
+      "warmup-iterations": 0,
+      "iterations": {{ iterations | default(100) }},
+      "clients": 1
+    },
+    {
+      "name": "knn-recall-100-300-filter-disabled-42-percent",
+      "tags": ["search"],
+      "operation": "knn-recall-100-300-filter-disabled-42-percent",
+      "warmup-iterations": 0,
+      "iterations": 1,
+      "clients": 1
+    },
+    {
+      "name": "knn-search-100-300-filter-disabled-53-percent",
+      "tags": ["search"],
+      "operation": "knn-search-100-300-filter-disabled-53-percent",
+      "warmup-iterations": 0,
+      "iterations": {{ iterations | default(100) }},
+      "clients": 1
+    },
+    {
+      "name": "knn-recall-100-300-filter-disabled-53-percent",
+      "tags": ["search"],
+      "operation": "knn-recall-100-300-filter-disabled-53-percent",
+      "warmup-iterations": 0,
+      "iterations": 1,
+      "clients": 1
+    },
+    {
+      "name": "knn-search-100-300-filter-disabled-62-percent",
+      "tags": ["search"],
+      "operation": "knn-search-100-300-filter-disabled-62-percent",
+      "warmup-iterations": 0,
+      "iterations": {{ iterations | default(100) }},
+      "clients": 1
+    },
+    {
+      "name": "knn-recall-100-300-filter-disabled-62-percent",
+      "tags": ["search"],
+      "operation": "knn-recall-100-300-filter-disabled-62-percent",
+      "warmup-iterations": 0,
+      "iterations": 1,
+      "clients": 1
+    },
+    {
+      "name": "knn-search-100-300-filter-disabled-74-percent",
+      "tags": ["search"],
+      "operation": "knn-search-100-300-filter-disabled-74-percent",
+      "warmup-iterations": 0,
+      "iterations": {{ iterations | default(100) }},
+      "clients": 1
+    },
+    {
+      "name": "knn-recall-100-300-filter-disabled-74-percent",
+      "tags": ["search"],
+      "operation": "knn-recall-100-300-filter-disabled-74-percent",
+      "warmup-iterations": 0,
+      "iterations": 1,
+      "clients": 1
+    },
+    {
+      "name": "knn-search-100-300-filter-disabled-83-percent",
+      "tags": ["search"],
+      "operation": "knn-search-100-300-filter-disabled-83-percent",
+      "warmup-iterations": 0,
+      "iterations": {{ iterations | default(100) }},
+      "clients": 1
+    },
+    {
+      "name": "knn-recall-100-300-filter-disabled-83-percent",
+      "tags": ["search"],
+      "operation": "knn-recall-100-300-filter-disabled-83-percent",
+      "warmup-iterations": 0,
+      "iterations": 1,
+      "clients": 1
+    },
+    {
+      "name": "knn-search-100-300-filter-disabled-94-percent",
+      "tags": ["search"],
+      "operation": "knn-search-100-300-filter-disabled-94-percent",
+      "warmup-iterations": 0,
+      "iterations": {{ iterations | default(100) }},
+      "clients": 1
+    },
+    {
+      "name": "knn-recall-100-300-filter-disabled-94-percent",
+      "tags": ["search"],
+      "operation": "knn-recall-100-300-filter-disabled-94-percent",
       "warmup-iterations": 0,
       "iterations": 1,
       "clients": 1
@@ -666,258 +924,516 @@
       "clients": 1
     },
     {
-      "name": "knn-search-10-50-filter-16-percent-force-merge",
+      "name": "knn-search-10-50-filter-enabled-16-percent-force-merge",
       "tags": ["search"],
-      "operation": "knn-search-10-50-filter-16-percent",
+      "operation": "knn-search-10-50-filter-enabled-16-percent",
       "warmup-iterations": 0,
       "iterations": {{ iterations | default(100) }},
       "clients": 1
     },
     {
-      "name": "knn-recall-10-50-filter-16-percent-force-merge",
+      "name": "knn-recall-10-50-filter-enabled-16-percent-force-merge",
       "tags": ["search"],
-      "operation": "knn-recall-10-50-filter-16-percent",
+      "operation": "knn-recall-10-50-filter-enabled-16-percent",
       "warmup-iterations": 0,
       "iterations": 1,
       "clients": 1
     },
     {
-      "name": "knn-search-10-50-filter-32-percent-force-merge",
+      "name": "knn-search-10-50-filter-enabled-32-percent-force-merge",
       "tags": ["search"],
-      "operation": "knn-search-10-50-filter-32-percent",
+      "operation": "knn-search-10-50-filter-enabled-32-percent",
       "warmup-iterations": 0,
       "iterations": {{ iterations | default(100) }},
       "clients": 1
     },
     {
-      "name": "knn-recall-10-50-filter-32-percent-force-merge",
+      "name": "knn-recall-10-50-filter-enabled-32-percent-force-merge",
       "tags": ["search"],
-      "operation": "knn-recall-10-50-filter-32-percent",
+      "operation": "knn-recall-10-50-filter-enabled-32-percent",
       "warmup-iterations": 0,
       "iterations": 1,
       "clients": 1
     },
     {
-      "name": "knn-search-10-50-filter-42-percent-force-merge",
+      "name": "knn-search-10-50-filter-enabled-42-percent-force-merge",
       "tags": ["search"],
-      "operation": "knn-search-10-50-filter-42-percent",
+      "operation": "knn-search-10-50-filter-enabled-42-percent",
       "warmup-iterations": 0,
       "iterations": {{ iterations | default(100) }},
       "clients": 1
     },
     {
-      "name": "knn-recall-10-50-filter-42-percent-force-merge",
+      "name": "knn-recall-10-50-filter-enabled-42-percent-force-merge",
       "tags": ["search"],
-      "operation": "knn-recall-10-50-filter-42-percent",
+      "operation": "knn-recall-10-50-filter-enabled-42-percent",
       "warmup-iterations": 0,
       "iterations": 1,
       "clients": 1
     },
     {
-      "name": "knn-search-10-50-filter-53-percent-force-merge",
+      "name": "knn-search-10-50-filter-enabled-53-percent-force-merge",
       "tags": ["search"],
-      "operation": "knn-search-10-50-filter-53-percent",
+      "operation": "knn-search-10-50-filter-enabled-53-percent",
       "warmup-iterations": 0,
       "iterations": {{ iterations | default(100) }},
       "clients": 1
     },
     {
-      "name": "knn-recall-10-50-filter-53-percent-force-merge",
+      "name": "knn-recall-10-50-filter-enabled-53-percent-force-merge",
       "tags": ["search"],
-      "operation": "knn-recall-10-50-filter-53-percent",
+      "operation": "knn-recall-10-50-filter-enabled-53-percent",
       "warmup-iterations": 0,
       "iterations": 1,
       "clients": 1
     },
     {
-      "name": "knn-search-10-50-filter-62-percent-force-merge",
+      "name": "knn-search-10-50-filter-enabled-62-percent-force-merge",
       "tags": ["search"],
-      "operation": "knn-search-10-50-filter-62-percent",
+      "operation": "knn-search-10-50-filter-enabled-62-percent",
       "warmup-iterations": 0,
       "iterations": {{ iterations | default(100) }},
       "clients": 1
     },
     {
-      "name": "knn-recall-10-50-filter-62-percent-force-merge",
+      "name": "knn-recall-10-50-filter-enabled-62-percent-force-merge",
       "tags": ["search"],
-      "operation": "knn-recall-10-50-filter-62-percent",
+      "operation": "knn-recall-10-50-filter-enabled-62-percent",
       "warmup-iterations": 0,
       "iterations": 1,
       "clients": 1
     },
     {
-      "name": "knn-search-10-50-filter-74-percent-force-merge",
+      "name": "knn-search-10-50-filter-enabled-74-percent-force-merge",
       "tags": ["search"],
-      "operation": "knn-search-10-50-filter-74-percent",
+      "operation": "knn-search-10-50-filter-enabled-74-percent",
       "warmup-iterations": 0,
       "iterations": {{ iterations | default(100) }},
       "clients": 1
     },
     {
-      "name": "knn-recall-10-50-filter-74-percent-force-merge",
+      "name": "knn-recall-10-50-filter-enabled-74-percent-force-merge",
       "tags": ["search"],
-      "operation": "knn-recall-10-50-filter-74-percent",
+      "operation": "knn-recall-10-50-filter-enabled-74-percent",
       "warmup-iterations": 0,
       "iterations": 1,
       "clients": 1
     },
     {
-      "name": "knn-search-10-50-filter-83-percent-force-merge",
+      "name": "knn-search-10-50-filter-enabled-83-percent-force-merge",
       "tags": ["search"],
-      "operation": "knn-search-10-50-filter-83-percent",
+      "operation": "knn-search-10-50-filter-enabled-83-percent",
       "warmup-iterations": 0,
       "iterations": {{ iterations | default(100) }},
       "clients": 1
     },
     {
-      "name": "knn-recall-10-50-filter-83-percent-force-merge",
+      "name": "knn-recall-10-50-filter-enabled-83-percent-force-merge",
       "tags": ["search"],
-      "operation": "knn-recall-10-50-filter-83-percent",
+      "operation": "knn-recall-10-50-filter-enabled-83-percent",
       "warmup-iterations": 0,
       "iterations": 1,
       "clients": 1
     },
     {
-      "name": "knn-search-10-50-filter-94-percent-force-merge",
+      "name": "knn-search-10-50-filter-enabled-94-percent-force-merge",
       "tags": ["search"],
-      "operation": "knn-search-10-50-filter-94-percent",
+      "operation": "knn-search-10-50-filter-enabled-94-percent",
       "warmup-iterations": 0,
       "iterations": {{ iterations | default(100) }},
       "clients": 1
     },
     {
-      "name": "knn-recall-10-50-filter-94-percent-force-merge",
+      "name": "knn-recall-10-50-filter-enabled-94-percent-force-merge",
       "tags": ["search"],
-      "operation": "knn-recall-10-50-filter-94-percent",
+      "operation": "knn-recall-10-50-filter-enabled-94-percent",
       "warmup-iterations": 0,
       "iterations": 1,
       "clients": 1
     },
 
     {
-      "name": "knn-search-100-300-filter-16-percent-force-merge",
+      "name": "knn-search-100-300-filter-enabled-16-percent-force-merge",
       "tags": ["search"],
-      "operation": "knn-search-100-300-filter-16-percent",
+      "operation": "knn-search-100-300-filter-enabled-16-percent",
       "warmup-iterations": 0,
       "iterations": {{ iterations | default(100) }},
       "clients": 1
     },
     {
-      "name": "knn-recall-100-300-filter-16-percent-force-merge",
+      "name": "knn-recall-100-300-filter-enabled-16-percent-force-merge",
       "tags": ["search"],
-      "operation": "knn-recall-100-300-filter-16-percent",
+      "operation": "knn-recall-100-300-filter-enabled-16-percent",
       "warmup-iterations": 0,
       "iterations": 1,
       "clients": 1
     },
     {
-      "name": "knn-search-100-300-filter-32-percent-force-merge",
+      "name": "knn-search-100-300-filter-enabled-32-percent-force-merge",
       "tags": ["search"],
-      "operation": "knn-search-100-300-filter-32-percent",
+      "operation": "knn-search-100-300-filter-enabled-32-percent",
       "warmup-iterations": 0,
       "iterations": {{ iterations | default(100) }},
       "clients": 1
     },
     {
-      "name": "knn-recall-100-300-filter-32-percent-force-merge",
+      "name": "knn-recall-100-300-filter-enabled-32-percent-force-merge",
       "tags": ["search"],
-      "operation": "knn-recall-100-300-filter-32-percent",
+      "operation": "knn-recall-100-300-filter-enabled-32-percent",
       "warmup-iterations": 0,
       "iterations": 1,
       "clients": 1
     },
     {
-      "name": "knn-search-100-300-filter-42-percent-force-merge",
+      "name": "knn-search-100-300-filter-enabled-42-percent-force-merge",
       "tags": ["search"],
-      "operation": "knn-search-100-300-filter-42-percent",
+      "operation": "knn-search-100-300-filter-enabled-42-percent",
       "warmup-iterations": 0,
       "iterations": {{ iterations | default(100) }},
       "clients": 1
     },
     {
-      "name": "knn-recall-100-300-filter-42-percent-force-merge",
+      "name": "knn-recall-100-300-filter-enabled-42-percent-force-merge",
       "tags": ["search"],
-      "operation": "knn-recall-100-300-filter-42-percent",
+      "operation": "knn-recall-100-300-filter-enabled-42-percent",
       "warmup-iterations": 0,
       "iterations": 1,
       "clients": 1
     },
     {
-      "name": "knn-search-100-300-filter-53-percent-force-merge",
+      "name": "knn-search-100-300-filter-enabled-53-percent-force-merge",
       "tags": ["search"],
-      "operation": "knn-search-100-300-filter-53-percent",
+      "operation": "knn-search-100-300-filter-enabled-53-percent",
       "warmup-iterations": 0,
       "iterations": {{ iterations | default(100) }},
       "clients": 1
     },
     {
-      "name": "knn-recall-100-300-filter-53-percent-force-merge",
+      "name": "knn-recall-100-300-filter-enabled-53-percent-force-merge",
       "tags": ["search"],
-      "operation": "knn-recall-100-300-filter-53-percent",
+      "operation": "knn-recall-100-300-filter-enabled-53-percent",
       "warmup-iterations": 0,
       "iterations": 1,
       "clients": 1
     },
     {
-      "name": "knn-search-100-300-filter-62-percent-force-merge",
+      "name": "knn-search-100-300-filter-enabled-62-percent-force-merge",
       "tags": ["search"],
-      "operation": "knn-search-100-300-filter-62-percent",
+      "operation": "knn-search-100-300-filter-enabled-62-percent",
       "warmup-iterations": 0,
       "iterations": {{ iterations | default(100) }},
       "clients": 1
     },
     {
-      "name": "knn-recall-100-300-filter-62-percent-force-merge",
+      "name": "knn-recall-100-300-filter-enabled-62-percent-force-merge",
       "tags": ["search"],
-      "operation": "knn-recall-100-300-filter-62-percent",
+      "operation": "knn-recall-100-300-filter-enabled-62-percent",
       "warmup-iterations": 0,
       "iterations": 1,
       "clients": 1
     },
     {
-      "name": "knn-search-100-300-filter-74-percent-force-merge",
+      "name": "knn-search-100-300-filter-enabled-74-percent-force-merge",
       "tags": ["search"],
-      "operation": "knn-search-100-300-filter-74-percent",
+      "operation": "knn-search-100-300-filter-enabled-74-percent",
       "warmup-iterations": 0,
       "iterations": {{ iterations | default(100) }},
       "clients": 1
     },
     {
-      "name": "knn-recall-100-300-filter-74-percent-force-merge",
+      "name": "knn-recall-100-300-filter-enabled-74-percent-force-merge",
       "tags": ["search"],
-      "operation": "knn-recall-100-300-filter-74-percent",
+      "operation": "knn-recall-100-300-filter-enabled-74-percent",
       "warmup-iterations": 0,
       "iterations": 1,
       "clients": 1
     },
     {
-      "name": "knn-search-100-300-filter-83-percent-force-merge",
+      "name": "knn-search-100-300-filter-enabled-83-percent-force-merge",
       "tags": ["search"],
-      "operation": "knn-search-100-300-filter-83-percent",
+      "operation": "knn-search-100-300-filter-enabled-83-percent",
       "warmup-iterations": 0,
       "iterations": {{ iterations | default(100) }},
       "clients": 1
     },
     {
-      "name": "knn-recall-100-300-filter-83-percent-force-merge",
+      "name": "knn-recall-100-300-filter-enabled-83-percent-force-merge",
       "tags": ["search"],
-      "operation": "knn-recall-100-300-filter-83-percent",
+      "operation": "knn-recall-100-300-filter-enabled-83-percent",
       "warmup-iterations": 0,
       "iterations": 1,
       "clients": 1
     },
     {
-      "name": "knn-search-100-300-filter-94-percent-force-merge",
+      "name": "knn-search-100-300-filter-enabled-94-percent-force-merge",
       "tags": ["search"],
-      "operation": "knn-search-100-300-filter-94-percent",
+      "operation": "knn-search-100-300-filter-enabled-94-percent",
       "warmup-iterations": 0,
       "iterations": {{ iterations | default(100) }},
       "clients": 1
     },
     {
-      "name": "knn-recall-100-300-filter-94-percent-force-merge",
+      "name": "knn-recall-100-300-filter-enabled-94-percent-force-merge",
       "tags": ["search"],
-      "operation": "knn-recall-100-300-filter-94-percent",
+      "operation": "knn-recall-100-300-filter-enabled-94-percent",
+      "warmup-iterations": 0,
+      "iterations": 1,
+      "clients": 1
+    },
+
+    {
+      "name": "knn-search-10-50-filter-disabled-16-percent-force-merge",
+      "tags": ["search"],
+      "operation": "knn-search-10-50-filter-disabled-16-percent",
+      "warmup-iterations": 0,
+      "iterations": {{ iterations | default(100) }},
+      "clients": 1
+    },
+    {
+      "name": "knn-recall-10-50-filter-disabled-16-percent-force-merge",
+      "tags": ["search"],
+      "operation": "knn-recall-10-50-filter-disabled-16-percent",
+      "warmup-iterations": 0,
+      "iterations": 1,
+      "clients": 1
+    },
+    {
+      "name": "knn-search-10-50-filter-disabled-32-percent-force-merge",
+      "tags": ["search"],
+      "operation": "knn-search-10-50-filter-disabled-32-percent",
+      "warmup-iterations": 0,
+      "iterations": {{ iterations | default(100) }},
+      "clients": 1
+    },
+    {
+      "name": "knn-recall-10-50-filter-disabled-32-percent-force-merge",
+      "tags": ["search"],
+      "operation": "knn-recall-10-50-filter-disabled-32-percent",
+      "warmup-iterations": 0,
+      "iterations": 1,
+      "clients": 1
+    },
+    {
+      "name": "knn-search-10-50-filter-disabled-42-percent-force-merge",
+      "tags": ["search"],
+      "operation": "knn-search-10-50-filter-disabled-42-percent",
+      "warmup-iterations": 0,
+      "iterations": {{ iterations | default(100) }},
+      "clients": 1
+    },
+    {
+      "name": "knn-recall-10-50-filter-disabled-42-percent-force-merge",
+      "tags": ["search"],
+      "operation": "knn-recall-10-50-filter-disabled-42-percent",
+      "warmup-iterations": 0,
+      "iterations": 1,
+      "clients": 1
+    },
+    {
+      "name": "knn-search-10-50-filter-disabled-53-percent-force-merge",
+      "tags": ["search"],
+      "operation": "knn-search-10-50-filter-disabled-53-percent",
+      "warmup-iterations": 0,
+      "iterations": {{ iterations | default(100) }},
+      "clients": 1
+    },
+    {
+      "name": "knn-recall-10-50-filter-disabled-53-percent-force-merge",
+      "tags": ["search"],
+      "operation": "knn-recall-10-50-filter-disabled-53-percent",
+      "warmup-iterations": 0,
+      "iterations": 1,
+      "clients": 1
+    },
+    {
+      "name": "knn-search-10-50-filter-disabled-62-percent-force-merge",
+      "tags": ["search"],
+      "operation": "knn-search-10-50-filter-disabled-62-percent",
+      "warmup-iterations": 0,
+      "iterations": {{ iterations | default(100) }},
+      "clients": 1
+    },
+    {
+      "name": "knn-recall-10-50-filter-disabled-62-percent-force-merge",
+      "tags": ["search"],
+      "operation": "knn-recall-10-50-filter-disabled-62-percent",
+      "warmup-iterations": 0,
+      "iterations": 1,
+      "clients": 1
+    },
+    {
+      "name": "knn-search-10-50-filter-disabled-74-percent-force-merge",
+      "tags": ["search"],
+      "operation": "knn-search-10-50-filter-disabled-74-percent",
+      "warmup-iterations": 0,
+      "iterations": {{ iterations | default(100) }},
+      "clients": 1
+    },
+    {
+      "name": "knn-recall-10-50-filter-disabled-74-percent-force-merge",
+      "tags": ["search"],
+      "operation": "knn-recall-10-50-filter-disabled-74-percent",
+      "warmup-iterations": 0,
+      "iterations": 1,
+      "clients": 1
+    },
+    {
+      "name": "knn-search-10-50-filter-disabled-83-percent-force-merge",
+      "tags": ["search"],
+      "operation": "knn-search-10-50-filter-disabled-83-percent",
+      "warmup-iterations": 0,
+      "iterations": {{ iterations | default(100) }},
+      "clients": 1
+    },
+    {
+      "name": "knn-recall-10-50-filter-disabled-83-percent-force-merge",
+      "tags": ["search"],
+      "operation": "knn-recall-10-50-filter-disabled-83-percent",
+      "warmup-iterations": 0,
+      "iterations": 1,
+      "clients": 1
+    },
+    {
+      "name": "knn-search-10-50-filter-disabled-94-percent-force-merge",
+      "tags": ["search"],
+      "operation": "knn-search-10-50-filter-disabled-94-percent",
+      "warmup-iterations": 0,
+      "iterations": {{ iterations | default(100) }},
+      "clients": 1
+    },
+    {
+      "name": "knn-recall-10-50-filter-disabled-94-percent-force-merge",
+      "tags": ["search"],
+      "operation": "knn-recall-10-50-filter-disabled-94-percent",
+      "warmup-iterations": 0,
+      "iterations": 1,
+      "clients": 1
+    },
+
+    {
+      "name": "knn-search-100-300-filter-disabled-16-percent-force-merge",
+      "tags": ["search"],
+      "operation": "knn-search-100-300-filter-disabled-16-percent",
+      "warmup-iterations": 0,
+      "iterations": {{ iterations | default(100) }},
+      "clients": 1
+    },
+    {
+      "name": "knn-recall-100-300-filter-disabled-16-percent-force-merge",
+      "tags": ["search"],
+      "operation": "knn-recall-100-300-filter-disabled-16-percent",
+      "warmup-iterations": 0,
+      "iterations": 1,
+      "clients": 1
+    },
+    {
+      "name": "knn-search-100-300-filter-disabled-32-percent-force-merge",
+      "tags": ["search"],
+      "operation": "knn-search-100-300-filter-disabled-32-percent",
+      "warmup-iterations": 0,
+      "iterations": {{ iterations | default(100) }},
+      "clients": 1
+    },
+    {
+      "name": "knn-recall-100-300-filter-disabled-32-percent-force-merge",
+      "tags": ["search"],
+      "operation": "knn-recall-100-300-filter-disabled-32-percent",
+      "warmup-iterations": 0,
+      "iterations": 1,
+      "clients": 1
+    },
+    {
+      "name": "knn-search-100-300-filter-disabled-42-percent-force-merge",
+      "tags": ["search"],
+      "operation": "knn-search-100-300-filter-disabled-42-percent",
+      "warmup-iterations": 0,
+      "iterations": {{ iterations | default(100) }},
+      "clients": 1
+    },
+    {
+      "name": "knn-recall-100-300-filter-disabled-42-percent-force-merge",
+      "tags": ["search"],
+      "operation": "knn-recall-100-300-filter-disabled-42-percent",
+      "warmup-iterations": 0,
+      "iterations": 1,
+      "clients": 1
+    },
+    {
+      "name": "knn-search-100-300-filter-disabled-53-percent-force-merge",
+      "tags": ["search"],
+      "operation": "knn-search-100-300-filter-disabled-53-percent",
+      "warmup-iterations": 0,
+      "iterations": {{ iterations | default(100) }},
+      "clients": 1
+    },
+    {
+      "name": "knn-recall-100-300-filter-disabled-53-percent-force-merge",
+      "tags": ["search"],
+      "operation": "knn-recall-100-300-filter-disabled-53-percent",
+      "warmup-iterations": 0,
+      "iterations": 1,
+      "clients": 1
+    },
+    {
+      "name": "knn-search-100-300-filter-disabled-62-percent-force-merge",
+      "tags": ["search"],
+      "operation": "knn-search-100-300-filter-disabled-62-percent",
+      "warmup-iterations": 0,
+      "iterations": {{ iterations | default(100) }},
+      "clients": 1
+    },
+    {
+      "name": "knn-recall-100-300-filter-disabled-62-percent-force-merge",
+      "tags": ["search"],
+      "operation": "knn-recall-100-300-filter-disabled-62-percent",
+      "warmup-iterations": 0,
+      "iterations": 1,
+      "clients": 1
+    },
+    {
+      "name": "knn-search-100-300-filter-disabled-74-percent-force-merge",
+      "tags": ["search"],
+      "operation": "knn-search-100-300-filter-disabled-74-percent",
+      "warmup-iterations": 0,
+      "iterations": {{ iterations | default(100) }},
+      "clients": 1
+    },
+    {
+      "name": "knn-recall-100-300-filter-disabled-74-percent-force-merge",
+      "tags": ["search"],
+      "operation": "knn-recall-100-300-filter-disabled-74-percent",
+      "warmup-iterations": 0,
+      "iterations": 1,
+      "clients": 1
+    },
+    {
+      "name": "knn-search-100-300-filter-disabled-83-percent-force-merge",
+      "tags": ["search"],
+      "operation": "knn-search-100-300-filter-disabled-83-percent",
+      "warmup-iterations": 0,
+      "iterations": {{ iterations | default(100) }},
+      "clients": 1
+    },
+    {
+      "name": "knn-recall-100-300-filter-disabled-83-percent-force-merge",
+      "tags": ["search"],
+      "operation": "knn-recall-100-300-filter-disabled-83-percent",
+      "warmup-iterations": 0,
+      "iterations": 1,
+      "clients": 1
+    },
+    {
+      "name": "knn-search-100-300-filter-disabled-94-percent-force-merge",
+      "tags": ["search"],
+      "operation": "knn-search-100-300-filter-disabled-94-percent",
+      "warmup-iterations": 0,
+      "iterations": {{ iterations | default(100) }},
+      "clients": 1
+    },
+    {
+      "name": "knn-recall-100-300-filter-disabled-94-percent-force-merge",
+      "tags": ["search"],
+      "operation": "knn-recall-100-300-filter-disabled-94-percent",
       "warmup-iterations": 0,
       "iterations": 1,
       "clients": 1
