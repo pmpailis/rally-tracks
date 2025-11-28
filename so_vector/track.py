@@ -217,7 +217,7 @@ class KnnRecallParamSource:
             "cache": self._params.get("cache", False),
             "size": self._params.get("k", 10),
             "num_candidates": self._params.get("num_candidates", 50),
-            "post_filtering_threshold": self._params.get("post_filtering_threshold", 50),
+            "post_filtering_threshold": self._params.get("post_filtering_threshold", 0.8),
             "oversample": self._params.get("oversample", -1),
             "knn_vector_store": KnnVectorStore(),
             "filter": self._params.get("filter", None),
