@@ -106,7 +106,7 @@ class KnnParamSource:
                     "field": "titleVector",
                     "query_vector": query_vec,
                     "k": self._params.get("k", DEFAULT_K),
-                    "post_filtering_threshold": post_filtering_threshold if post_filtering_threshold is not None else 0.8,
+                    "post_filtering_threshold": post_filtering_threshold if post_filtering_threshold is not None else 1,
                     **({"num_candidates": num_candidates} if num_candidates is not None else {}),
                 }
             }
