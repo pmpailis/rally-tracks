@@ -61,7 +61,7 @@ class KnnParamSource:
             knn_query["knn"]["filter"] = self._params["filter"]
         if oversample >= 0:
             knn_query["knn"]["rescore_vector"] = {"oversample": oversample}
-        result["body"] = {"query": knn_query}
+        result["body"] = knn_query
         self._iters += 1
         if self._iters >= self._maxIters:
             self._iters = 0
@@ -128,11 +128,12 @@ class KnnRecallRunner:
                 "query_vector": query_vec,
                 "k": k,
                 "num_candidates": num_candidates,
-            }
+            },
+            "_source": False,
         }
         if oversample >= 0:
             knn_query["knn"]["rescore_vector"] = {"oversample": oversample}
-        return {"query": knn_query, "_source": False}
+        return knn_query
 
     async def __call__(self, es, params):
         k = params["size"]
