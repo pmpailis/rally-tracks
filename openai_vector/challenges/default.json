@@ -13,10 +13,6 @@
       "operation": "create-index"
     },
     {
-      "name": "check-cluster-health",
-      "operation": "check-cluster-health"
-    },
-    {
       "name": "initial-documents-indexing",
       "operation": "initial-documents-indexing",
       "warmup-time-period": {{ initial_indexing_bulk_warmup | default(40) | int }},
