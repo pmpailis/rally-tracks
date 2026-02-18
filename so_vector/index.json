@@ -39,8 +39,7 @@
           {%- endif %}
           {%- if vector_index_ef_construction is defined %},
           "ef_construction": {{ vector_index_ef_construction | int }}
-          {%- endif %},
-          "on_disk_rescore": {{ vector_index_on_disk_rescore | default(false) | tojson }}
+          {%- endif %}
           {%- if vector_index_rescore_oversample is defined %},
           "rescore_vector": {
             "oversample": {{ vector_index_rescore_oversample | int }}
