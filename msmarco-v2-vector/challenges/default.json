@@ -77,36 +77,76 @@
     },
     {%- endif %}
     {%- endif -%}{# include-initial-indexing-marker-end #}
-    {%- for i in range(p_search_ops|length) %}
-    {
-      {%- if p_search_ops[i]|length > 3 and p_search_ops[i][3] > 0 -%}
-        "name": "standalone-search-knn-{{p_search_ops[i][0]}}-{{p_search_ops[i][1]}}-{{p_search_ops[i][2]}}-{{p_search_ops[i][3]}}-single-client",
-        "operation": "knn-search-{{p_search_ops[i][0]}}-{{p_search_ops[i][1]}}-{{p_search_ops[i][2]}}-{{p_search_ops[i][3]}}"
-      {%- elif p_search_ops[i][2] > 0 -%}
-        "name": "standalone-search-knn-{{p_search_ops[i][0]}}-{{p_search_ops[i][1]}}-{{p_search_ops[i][2]}}-single-client",
-        "operation": "knn-search-{{p_search_ops[i][0]}}-{{p_search_ops[i][1]}}-{{p_search_ops[i][2]}}"
-      {%- else -%}
-        "name": "standalone-search-knn-{{p_search_ops[i][0]}}-{{p_search_ops[i][1]}}-single-client",
-        "operation": "knn-search-{{p_search_ops[i][0]}}-{{p_search_ops[i][1]}}"
-      {%- endif -%},
-      "warmup-iterations": {{ standalone_search_warmup_iterations | default(1000) | int }},
-      "iterations": {{ standalone_search_iterations | default(10000) | int }}
-    },
-    {
-      {%- if p_search_ops[i]|length > 3 and p_search_ops[i][3] > 0 -%}
-        "name": "standalone-search-knn-{{p_search_ops[i][0]}}-{{p_search_ops[i][1]}}-{{p_search_ops[i][2]}}-{{p_search_ops[i][3]}}-multiple-clients",
-        "operation": "knn-search-{{p_search_ops[i][0]}}-{{p_search_ops[i][1]}}-{{p_search_ops[i][2]}}-{{p_search_ops[i][3]}}"
-      {%- elif p_search_ops[i][2] > 0 -%}
-        "name": "standalone-search-knn-{{p_search_ops[i][0]}}-{{p_search_ops[i][1]}}-{{p_search_ops[i][2]}}-multiple-clients",
-        "operation": "knn-search-{{p_search_ops[i][0]}}-{{p_search_ops[i][1]}}-{{p_search_ops[i][2]}}"
-      {%- else -%}
-        "name": "standalone-search-knn-{{p_search_ops[i][0]}}-{{p_search_ops[i][1]}}-multiple-clients",
-        "operation": "knn-search-{{p_search_ops[i][0]}}-{{p_search_ops[i][1]}}"
-      {%- endif -%},
-      "warmup-iterations": {{ standalone_search_warmup_iterations | default(1000) | int }},
-      "clients": {{ standalone_search_clients | default(8) | int }},
-      "iterations": {{ standalone_search_iterations | default(10000) | int }}
-    }{%- if not loop.last %},{%- endif %}
+    {#- with include_force_merged_search, the searches run again (suffix "-force-merge") after a force merge, before parallel indexing adds segments -#}
+    {%- for phase in (["", "-force-merge"] if include_force_merged_search|default(false) else [""]) %}
+      {%- if not loop.first %},
+      {
+        "name": "force-merge-before-force-merge-searches",
+        "operation": "force-merge"
+      },
+      {
+        "name": "wait-until-force-merge-before-force-merge-searches-completes",
+        "operation": {
+          "operation-type": "index-stats",
+          "index": "_all",
+          "condition": {
+            "path": "_all.total.merges.current",
+            "expected-value": 0
+          },
+          "retries": 1440,
+          "retry-on-error": true,
+          "retry-wait-period": 30,
+          "include-in-reporting": true
+        }
+      },
+      {%- endif %}
+      {%- for i in range(p_search_ops|length) %}
+      {
+        {%- if p_search_ops[i]|length > 3 and p_search_ops[i][3] > 0 -%}
+          "name": "standalone-search-knn-{{p_search_ops[i][0]}}-{{p_search_ops[i][1]}}-{{p_search_ops[i][2]}}-{{p_search_ops[i][3]}}-single-client{{phase}}",
+          "operation": "knn-search-{{p_search_ops[i][0]}}-{{p_search_ops[i][1]}}-{{p_search_ops[i][2]}}-{{p_search_ops[i][3]}}"
+        {%- elif p_search_ops[i][2] > 0 -%}
+          "name": "standalone-search-knn-{{p_search_ops[i][0]}}-{{p_search_ops[i][1]}}-{{p_search_ops[i][2]}}-single-client{{phase}}",
+          "operation": "knn-search-{{p_search_ops[i][0]}}-{{p_search_ops[i][1]}}-{{p_search_ops[i][2]}}"
+        {%- else -%}
+          "name": "standalone-search-knn-{{p_search_ops[i][0]}}-{{p_search_ops[i][1]}}-single-client{{phase}}",
+          "operation": "knn-search-{{p_search_ops[i][0]}}-{{p_search_ops[i][1]}}"
+        {%- endif -%},
+        "warmup-iterations": {{ standalone_search_warmup_iterations | default(1000) | int }},
+        "iterations": {{ standalone_search_iterations | default(10000) | int }}
+      },
+      {
+        {%- if p_search_ops[i]|length > 3 and p_search_ops[i][3] > 0 -%}
+          "name": "standalone-search-knn-{{p_search_ops[i][0]}}-{{p_search_ops[i][1]}}-{{p_search_ops[i][2]}}-{{p_search_ops[i][3]}}-multiple-clients{{phase}}",
+          "operation": "knn-search-{{p_search_ops[i][0]}}-{{p_search_ops[i][1]}}-{{p_search_ops[i][2]}}-{{p_search_ops[i][3]}}"
+        {%- elif p_search_ops[i][2] > 0 -%}
+          "name": "standalone-search-knn-{{p_search_ops[i][0]}}-{{p_search_ops[i][1]}}-{{p_search_ops[i][2]}}-multiple-clients{{phase}}",
+          "operation": "knn-search-{{p_search_ops[i][0]}}-{{p_search_ops[i][1]}}-{{p_search_ops[i][2]}}"
+        {%- else -%}
+          "name": "standalone-search-knn-{{p_search_ops[i][0]}}-{{p_search_ops[i][1]}}-multiple-clients{{phase}}",
+          "operation": "knn-search-{{p_search_ops[i][0]}}-{{p_search_ops[i][1]}}"
+        {%- endif -%},
+        "warmup-iterations": {{ standalone_search_warmup_iterations | default(1000) | int }},
+        "clients": {{ standalone_search_clients | default(8) | int }},
+        "iterations": {{ standalone_search_iterations | default(10000) | int }}
+      }{%- if not loop.last %},{%- endif %}
+      {%- endfor %}
+      {%- if phase and include_recall|default(true) %}
+      {%- for i in range(p_search_ops|length) %},
+      {
+        {%- if p_search_ops[i]|length > 3 and p_search_ops[i][3] > 0 -%}
+          "name": "knn-recall-{{p_search_ops[i][0]}}-{{p_search_ops[i][1]}}-{{p_search_ops[i][2]}}-{{p_search_ops[i][3]}}{{phase}}",
+          "operation": "knn-recall-{{p_search_ops[i][0]}}-{{p_search_ops[i][1]}}-{{p_search_ops[i][2]}}-{{p_search_ops[i][3]}}"
+        {%- elif p_search_ops[i][2] > 0 -%}
+          "name": "knn-recall-{{p_search_ops[i][0]}}-{{p_search_ops[i][1]}}-{{p_search_ops[i][2]}}{{phase}}",
+          "operation": "knn-recall-{{p_search_ops[i][0]}}-{{p_search_ops[i][1]}}-{{p_search_ops[i][2]}}"
+        {%- else -%}
+          "name": "knn-recall-{{p_search_ops[i][0]}}-{{p_search_ops[i][1]}}{{phase}}",
+          "operation": "knn-recall-{{p_search_ops[i][0]}}-{{p_search_ops[i][1]}}"
+        {%- endif -%}
+      }
+      {%- endfor %}
+      {%- endif %}
     {%- endfor %}
     {%- if include_parallel_indexing|default(true) %},
     {

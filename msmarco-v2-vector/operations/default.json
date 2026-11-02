@@ -34,11 +34,11 @@
   "bulk-size": {{parallel_indexing_bulk_size | default(50)}},
   "ingest-percentage": {{parallel_indexing_ingest_percentage | default(100)}}
 }
-{%- if force_merge_max_num_segments is defined %},
+{%- if force_merge_max_num_segments is defined or include_force_merged_search|default(false) %},
 {
   "name": "force-merge",
   "operation-type": "force-merge",
-  "max-num-segments": {{ force_merge_max_num_segments }},
+  "max-num-segments": {{ force_merge_max_num_segments | default(1) }},
   "request-timeout": 36000,
   "include-in-reporting": true
 }
